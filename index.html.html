@@ -1,0 +1,2334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleccionables y Videojuegos Valdivia - Catálogo Completo</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #fceabb, #f8b500);
+            color: #333;
+        }
+
+        header {
+            background-color: #212121;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            text-align: center;
+        }
+
+            nav a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                border-right: 1px solid #444;
+            }
+
+                nav a:hover {
+                    background-color: #575757;
+                }
+
+        /* Sección de Búsqueda */
+        .search-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #game-search {
+            width: 80%;
+            max-width: 500px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        /* Estilos del Catálogo Físico */
+        .catalogo-fisico, .articulos-coleccionables {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .juego, .articulo {
+            background: white;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+            .juego img, .articulo img {
+                width: 100%;
+                border-radius: 5px;
+            }
+
+            .juego h3, .articulo h3 {
+                margin-top: 10px;
+                font-size: 18px;
+            }
+
+            .juego p, .articulo p {
+                font-size: 14px;
+                color: #555;
+                text-align: left;
+            }
+
+        .precio-fisico {
+            font-weight: bold;
+            color: #e53935;
+            margin: 10px 0;
+            text-align: center;
+        }
+
+        .btn-contacto {
+            background-color: #25D366;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+            .btn-contacto:hover {
+                background-color: #128C7E;
+            }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 12px 15px;
+            border-radius: 50%;
+            font-size: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-decoration: none;
+            z-index: 1000;
+        }
+
+        /* Estilos del Catálogo Digital y Retro */
+        .catalogo-digital {
+            background: linear-gradient(to right, #4b6cb7, #182848);
+            color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .plataforma-section {
+            margin-bottom: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+            .plataforma-section h2 {
+                text-align: center;
+                color: #f39c12;
+                border-bottom: 2px solid #f39c12;
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .juego-digital {
+            background-color: #1e2a3b;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+            .juego-digital:hover {
+                transform: translateY(-5px);
+            }
+
+            .juego-digital img {
+                width: 100%;
+                height: auto;
+                border-radius: 5px;
+                margin-bottom: 10px;
+            }
+
+            .juego-digital h3 {
+                font-size: 1.2em;
+                margin: 10px 0;
+                color: #e5e5e5;
+            }
+
+            .juego-digital p {
+                font-size: 0.9em;
+                color: #b0b0b0;
+                text-align: justify;
+            }
+
+        .precio-digital {
+            font-weight: bold;
+            color: #2ecc71;
+            font-size: 1.3em;
+            margin: 10px 0;
+        }
+
+        .oferta {
+            color: #e74c3c;
+            font-size: 0.9em;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Coleccionables y Videojuegos Valdivia</h1>
+        <p>Venta de videojuegos físicos, digitales y articulos coleccionables</p>
+    </header>
+
+    <nav>
+        <a href="#catalogo-fisico-ancla">Catálogo Físico</a>
+        <a href="#articulos-coleccionables-ancla">Artículos Coleccionables</a>
+        <a href="#catalogo-digital-ancla">Catálogo Digital</a>
+    </nav>
+
+    <div class="search-container">
+        <input type="text" id="game-search" placeholder="Buscar videojuegos y artículos...">
+    </div>
+
+    <a id="catalogo-fisico-ancla"></a>
+    <section class="catalogo-fisico">
+        <h2>Catálogo de Juegos Físicos</h2>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Pokemon+Leyendas+Arceus" alt="Pokemon Leyendas Arceus - Nintendo Switch">
+            <h3>Pokemon Leyendas Arceus (2022) - Nintendo Switch</h3>
+            <p>Una aventura épica que te transporta a la región de Hisui, donde tendrás que explorar un mundo abierto, investigar ecosistemas salvajes y completar la primera Pokédex. Un giro innovador a la fórmula clásica de la saga, combinando captura, combate y exploración de una forma nunca antes vista.</p>
+            <p class="precio-fisico">$30.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Pokemon Leyendas Arceus - Nintendo Switch">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Pokemon+Sol" alt="Pokemon Sol - Nintendo 3DS">
+            <h3>Pokemon Sol (2016) - Nintendo 3DS</h3>
+            <p>Embárcate en un viaje inolvidable por el archipiélago de Alola, una región paradisíaca llena de Pokémon nunca vistos. Acompaña a tus nuevos compañeros en una historia llena de misterios, desafíos y la oportunidad de convertirte en el mejor entrenador.</p>
+            <p class="precio-fisico">$30.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Pokemon Sol - Nintendo 3DS">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Super+Smash+Bros+N3ds" alt="Super Smash Bros - Nintendo 3DS">
+            <h3>Super Smash Bros. for Nintendo 3DS (2014)</h3>
+            <p>El frenético y divertido juego de lucha de Nintendo llega a la consola portátil. Disfruta de combates multijugador con un elenco de personajes icónicos, desde Mario hasta Link, en escenarios dinámicos y llenos de sorpresas.</p>
+            <p class="precio-fisico">$20.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Super Smash Bros - Nintendo 3DS">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Mario+Kart+7" alt="Mario Kart 7 - Nintendo 3DS">
+            <h3>Mario Kart 7 (2011) - Nintendo 3DS</h3>
+            <p>Corre por la victoria en una nueva dimensión de velocidad. Con la adición de planeadores para volar y hélices para sumergirte, este juego ofrece una jugabilidad renovada y emocionantes pistas que te harán sentir la adrenalina de cada carrera.</p>
+            <p class="precio-fisico">$20.000</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Mario Kart 7 - Nintendo 3DS">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Hello+Neighbor" alt="Hello Neighbor - PlayStation 4">
+            <h3>Hello Neighbor (2017) - PlayStation 4</h3>
+            <p>Un juego de terror de sigilo en primera persona con una mecánica de inteligencia artificial avanzada. Te infiltrarás en la casa de tu misterioso vecino para descubrir los secretos que esconde en su sótano, mientras él aprende de tus movimientos para atraparte.</p>
+            <p class="precio-fisico">$10.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Hello Neighbor - PlayStation 4">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Destiny" alt="Destiny - PlayStation 4">
+            <h3>Destiny (2014) - PlayStation 4</h3>
+            <p>Un shooter en primera persona de Bungie con un universo masivo y dinámico. Explora el sistema solar, lucha contra la oscuridad y colecciona equipo para forjar tu propia leyenda como un Guardián. Su jugabilidad adictiva y su enfoque multijugador lo convierten en una experiencia única.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Destiny - PlayStation 4">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Le+Tour+de+France+2024" alt="Le Tour de France 2024 - PlayStation 4">
+            <h3>Le Tour de France 2024 (2024) - PlayStation 4</h3>
+            <p>Vive la emoción de la carrera ciclista más prestigiosa del mundo. Conviértete en director de equipo o ciclista, y gestiona cada detalle de la estrategia, desde la preparación hasta los sprints finales. Gráficos realistas y una jugabilidad profunda te sumergen en la competición.</p>
+            <p class="precio-fisico">$15.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Le Tour de France 2024 - PlayStation 4">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=FIFA+20" alt="FIFA 20 - PlayStation 4">
+            <h3>FIFA 20 (2019) - PlayStation 4</h3>
+            <p>El simulador de fútbol definitivo que trae la autenticidad del deporte rey a tu consola. Con la inclusión de Volta Football, el juego callejero vuelve a la saga, y el modo carrera se renueva para ofrecer una experiencia más inmersiva.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en FIFA 20 - PlayStation 4">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Horizon+Zero+Dawn" alt="Horizon Zero Dawn - PlayStation 4">
+            <h3>Horizon Zero Dawn (2017) - PlayStation 4</h3>
+            <p>Sumérgete en un impresionante mundo post-apocalíptico dominado por máquinas. Asume el papel de Aloy, una cazadora exiliada, en su búsqueda para descubrir su pasado y detener la amenaza que acecha a la humanidad. Un RPG de acción con un combate innovador y un universo fascinante.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Horizon Zero Dawn - PlayStation 4">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=God+of+War+3+Remaster" alt="God of War 3 Remaster - PlayStation 4">
+            <h3>God of War 3 Remastered (2015) - PlayStation 4</h3>
+            <p>El épico final de la trilogía original de Kratos en una versión remasterizada para PlayStation 4. Con gráficos mejorados a 1080p y 60fps, revive la venganza del Fantasma de Esparta contra los dioses del Olimpo en una de las mejores aventuras de acción de la historia.</p>
+            <p class="precio-fisico">$10.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en God of War 3 Remaster - PlayStation 4">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=FIFA+World+Cup+Brazil+2014" alt="FIFA World Cup Brazil 2014 - PlayStation 3">
+            <h3>2014 FIFA World Cup Brazil (2014) - PlayStation 3</h3>
+            <p>Revive la pasión del Mundial de Brasil 2014. El juego oficial de la Copa del Mundo te permite guiar a tu selección favorita a la gloria, con todos los estadios, equipos y jugadores del torneo. Un clásico para los amantes del fútbol.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en FIFA World Cup Brazil 2014 - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Uncharted+2" alt="Uncharted 2 - PlayStation 3">
+            <h3>Uncharted 2: El Reino de los Ladrones (2009) - PlayStation 3</h3>
+            <p>Considerado uno de los mejores juegos de la generación, esta aventura de acción cinematográfica sigue a Nathan Drake en una búsqueda llena de tiroteos, saltos imposibles y una historia emocionante. Un título imprescindible para cualquier fan de la acción y la exploración.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Uncharted 2 - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=NBA+2K14" alt="NBA 2K14 - PlayStation 3">
+            <h3>NBA 2K14 (2013) - PlayStation 3</h3>
+            <p>Disfruta del baloncesto más realista con este aclamado simulador. Con un gameplay pulido, gráficos de alta calidad y los jugadores de la temporada 2013-2014, es el juego perfecto para los aficionados a la NBA.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en NBA 2K14 - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Battlefield+3" alt="Battlefield 3 - PlayStation 3">
+            <h3>Battlefield 3 (2011) - PlayStation 3</h3>
+            <p>Un shooter en primera persona que destacó por su modo multijugador masivo y la destrucción de escenarios gracias al motor Frostbite. Ofrece una campaña cinematográfica y un combate realista que te sumergirá en la guerra moderna.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Battlefield 3 - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Resident+Evil+6" alt="Resident Evil 6 - PlayStation 3">
+            <h3>Resident Evil 6 (2012) - PlayStation 3</h3>
+            <p>Una entrega de la saga de terror y acción que se divide en cuatro campañas jugables, cada una con su propio protagonista y estilo. Experimenta una historia global que conecta a personajes icónicos como Leon S. Kennedy y Chris Redfield en una lucha contra el bioterrorismo.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Resident Evil 6 - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Lego+Batman+2" alt="Lego Batman 2 - PlayStation 3">
+            <h3>Lego Batman 2: DC Super Heroes (2012) - PlayStation 3</h3>
+            <p>Una divertida aventura de acción y plataformas en la que Batman y Superman deben unir fuerzas para salvar Gotham City del Joker y Lex Luthor. Con un mundo abierto y el humor característico de los juegos de Lego, es ideal para toda la familia.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Lego Batman 2: DC Super Heroes - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Sniper+Elite+3" alt="Sniper Elite 3 - PlayStation 3">
+            <h3>Sniper Elite 3 (2014) - PlayStation 3</h3>
+            <p>Conviértete en un francotirador en el norte de África durante la Segunda Guerra Mundial. Un juego de sigilo y disparos táctico que te desafía a usar el entorno a tu favor y planear cada disparo con precisión milimétrica. Famoso por su cámara de rayos X, que muestra el impacto de cada bala.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Sniper Elite 3 - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Call+of+Duty+Advanced+Warfare" alt="Call of Duty Advanced Warfare - PlayStation 3">
+            <h3>Call of Duty: Advanced Warfare (2014) - PlayStation 3</h3>
+            <p>La saga de guerra más famosa se adentra en el futuro con exoesqueletos y armamento avanzado. Experimenta una campaña explosiva y un multijugador frenético con un movimiento vertical que redefine el combate de la serie.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Call of Duty: Advanced Warfare - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=God+of+War+3" alt="God of War 3 - PlayStation 3">
+            <h3>God of War III (2010) - PlayStation 3</h3>
+            <p>La conclusión épica de la trilogía original de Kratos. Armado con las Espadas del Exilio, se enfrenta a Zeus y a los dioses del Olimpo en batallas masivas y llenas de gore. Una obra maestra de la acción y la mitología.</p>
+            <p class="precio-fisico">$15.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en God of War 3 - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=God+of+War+Ascension" alt="God of War Ascension - PlayStation 3">
+            <h3>God of War: Ascension (2013) - PlayStation 3</h3>
+            <p>Una precuela que explora los orígenes de Kratos y su primera lucha para liberarse de la atadura de Ares. Un título con un combate brutal y un modo multijugador que te permite luchar junto a otros espartanos.</p>
+            <p class="precio-fisico">$15.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en God of War: Ascension - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Gran+Turismo+6" alt="Gran Turismo 6 - PlayStation 3">
+            <h3>Gran Turismo 6 (2013) - PlayStation 3</h3>
+            <p>El simulador de conducción definitiva de PlayStation 3. Con más de 1200 coches, 33 circuitos y un motor de físicas mejorado, ofrece una experiencia de carrera profunda y realista para los amantes del automovilismo.</p>
+            <p class="precio-fisico">$15.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Gran Turismo 6 - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Resident+Evil+Revelations+2" alt="Resident Evil Revelations 2 - PlayStation 3">
+            <h3>Resident Evil Revelations 2 (2015) - PlayStation 3</h3>
+            <p>Una entrega episódica que recupera el estilo de survival horror clásico. Sigue las historias de Claire Redfield y Barry Burton mientras intentan sobrevivir en una isla llena de horrores biológicos. Un juego que equilibra la acción y la tensión de forma magistral.</p>
+            <p class="precio-fisico">$15.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Resident Evil Revelations 2 - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Street+Fighter+4+Arcade+Edition" alt="Street Fighter 4 Arcade Edition - PlayStation 3">
+            <h3>Super Street Fighter IV: Arcade Edition (2011) - PlayStation 3</h3>
+            <p>El regreso de la saga de lucha más icónica de Capcom. Esta edición incluye nuevos personajes, escenarios y un sistema de combate perfeccionado. Es un juego esencial para los fans de la lucha y un gran punto de entrada para los recién llegados.</p>
+            <p class="precio-fisico">$15.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Street Fighter 4: Arcade Edition - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Tekken+6" alt="Tekken 6 - PlayStation 3">
+            <h3>Tekken 6 (2009) - PlayStation 3</h3>
+            <p>El Torneo del Rey del Puño de Hierro regresa con más personajes y escenarios que nunca. Un juego de lucha 3D con combos aéreos, un modo campaña lleno de acción y un sistema de "rage" que añade un giro estratégico a los combates.</p>
+            <p class="precio-fisico">$10.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Tekken 6 - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Naruto+Shippuden+Ultimate+Ninja+Storm+Generations" alt="Naruto Shippuden Ultimate Ninja Storm Generations - PlayStation 3">
+            <h3>Naruto Shippuden: Ultimate Ninja Storm Generations (2012) - PlayStation 3</h3>
+            <p>Un juego de lucha que abarca toda la historia de Naruto y Naruto Shippuden. Con un enorme roster de personajes, combates espectaculares y una presentación visual fiel al anime, es un juego imprescindible para los fans de la serie.</p>
+            <p class="precio-fisico">$8.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Naruto Shippuden: Ultimate Ninja Storm Generations - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=The+Lego+Movie+Videogame" alt="The Lego Movie Videogame - PlayStation 3">
+            <h3>The Lego Movie Videogame (2014) - PlayStation 3</h3>
+            <p>Basado en la exitosa película de Lego, este juego de acción y aventura te pone en el papel de Emmet, un constructor ordinario que debe salvar al mundo. Con un humor desternillante, puzles creativos y la diversión de los bloques de Lego, es un título perfecto para jugar en familia.</p>
+            <p class="precio-fisico">$8.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en The Lego Movie Videogame - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=GTA+Liberty+City" alt="Grand Theft Auto: Liberty City - PlayStation 3">
+            <h3>Grand Theft Auto: Liberty City Stories (2013) - PlayStation 3</h3>
+            <p>Revive una de las historias de crimen más icónicas de la saga Grand Theft Auto en esta versión remasterizada. Explora Liberty City, completa misiones y construye tu propio imperio criminal en una aventura de mundo abierto llena de acción.</p>
+            <p class="precio-fisico">$8.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Grand Theft Auto: Liberty City Stories - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Far+Cry+Compilation" alt="Far Cry Compilation - PlayStation 3">
+            <h3>Far Cry Compilation (2014) - PlayStation 3</h3>
+            <p>Una recopilación que incluye tres de las mejores entregas de la aclamada saga de Ubisoft: Far Cry 2, Far Cry 3 y Far Cry 3: Blood Dragon. Sumérgete en mundos abiertos exóticos, explora, caza y lucha por tu supervivencia en esta colección de juegos de acción en primera persona.</p>
+            <p class="precio-fisico">$8.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Far Cry Compilation - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Star+Wars+Clone+Wars+Republic+Heroes" alt="Star Wars Clone Wars Republic Heroes - Nintendo Wii">
+            <h3>Star Wars: The Clone Wars - Republic Heroes (2009) - Nintendo Wii</h3>
+            <p>Un juego de acción y aventura basado en la serie de televisión animada "The Clone Wars". Juega como Jedi o Clone Trooper y lucha contra los separatistas en misiones cooperativas llenas de acción. Ideal para fans de Star Wars de todas las edades.</p>
+            <p class="precio-fisico">$8.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Star Wars: Clone Wars Republic Heroes - Nintendo Wii">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=PES+2012" alt="PES 2012 - PlayStation 3">
+            <h3>Pro Evolution Soccer 2012 (2011) - PlayStation 3</h3>
+            <p>Un clásico del fútbol de Konami que se destacó por su jugabilidad fluida y táctica. Compite en ligas, copas y crea tu equipo de ensueño en este simulador deportivo atemporal.</p>
+            <p class="precio-fisico">$5.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Pro Evolution Soccer 2012 - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="https://via.placeholder.com/300x200?text=Lego+Avengers" alt="Lego Avengers - PlayStation 3">
+            <h3>Lego Marvel's Avengers (2016) - PlayStation 3</h3>
+            <p>Una aventura de acción y humor que recrea las películas de Marvel como Los Vengadores y La Era de Ultrón. Juega con tus héroes favoritos, desde Iron Man hasta Capitán América, y resuelve puzles en un mundo abierto lleno de acción.</p>
+            <p class="precio-fisico">$5.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Lego Avengers - PlayStation 3">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="" alt="Grand Theft Auto IV'- Xbox360">
+            <h3>Grand Theft Auto IV (2008) - Xbox 360</h3>
+            <p>Explora Liberty City como Niko Bellic en esta aclamada entrega que redefinió los juegos de mundo abierto con su narrativa y realismo.</p>
+            <p class="precio-fisico">$15.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Grand Theft Auto IV'- Xbox360 ">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="" alt="Grand Theft Auto IV'- Xbox360">
+            <h3>Grand Theft Auto: Episodes from Liberty City (2009) - Xbox 360</h3>
+            <p>Vive dos nuevas perspectivas de Liberty City con las expansiones The Lost and Damned y The Ballad of Gay Tony.</p>
+            <p class="precio-fisico">$15.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Grand Theft Auto: Episodes from Liberty City'- Xbox360">Hablar por WhatsApp</a>
+        </div>
+        <div class="juego">
+            <img src="" alt="inFAMOUS Second Son - PlayStation 4 ">
+            <h3>inFAMOUS Second Son (2014) - PlayStation 4 </h3>
+            <p>Controla a Delsin Rowe, un joven con la habilidad de absorber los poderes de otros conductores. Elige ser un héroe o un villano en Seattle.</p>
+            <p class="precio-fisico">$12.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en inFAMOUS Second Son - PlayStation 4">Hablar por WhatsApp</a>
+        </div>
+
+    </section>
+
+    <a id="articulos-coleccionables-ancla"></a>
+    <section class="articulos-coleccionables">
+        <h2>Artículos Coleccionables</h2>
+        <div class="articulo">
+            <img src="https://coleccionistas-adictos.com/wp-content/uploads/2023/09/q6qqInEl.jpg" alt="Album Nintendo salo (2007)">
+            <h3>Album Nintendo salo (2007)</h3>
+            <p>El álbum Nintendo (Salo, 2007) fue una colección chilena de 180 láminas con personajes y videojuegos clásicos de Nintendo, como Super Mario, Donkey Kong y The Legend of Zelda. Publicado por Salo S.A., incluía láminas normales y especiales, con ilustraciones a todo color y se vendía junto a sobres coleccionables. Fue muy popular entre niños y coleccionistas, y hoy es un objeto nostálgico de alto valor.</p>
+            <p class="precio-fisico">$25.000 CLP</p>
+            <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Estoy interesado en Album Nintendo salo (2007)">Hablar por WhatsApp</a>
+        </div>
+    </section>
+
+    <a id="catalogo-digital-ancla"></a>
+    <section class="catalogo-digital">
+        <header>
+            <h2>Catálogo de Juegos Digitales y Retro</h2>
+            <p class="oferta"><strong>Oferta: $2.000 CLP c/u o 3 por $5.000 CLP</strong></p>
+            <p><strong>¡Si el videojuego que buscas no esta en el catalogo no dudes en consular, no importa la plataforma!</strong></p>
+            <p><strong>¡El emulador sea para Android o Pc se incluye gratis con tu primera compra para la plataforma que compres!</strong></p>
+        </header>
+
+        <a id="ps3-ancla"></a>
+        <div class="plataforma-section">
+            <h2>PlayStation 3</h2>
+            <div class="grid-container">
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=The+Last+of+Us" alt="The Last of Us - PS3">
+                    <h3>The Last of Us (2013)</h3>
+                    <p>Una aventura post-apocalíptica de acción y supervivencia que narra la conmovedora historia de Joel y Ellie a través de unos Estados Unidos devastados.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=GTA+V" alt="Grand Theft Auto V - PS3">
+                    <h3>Grand Theft Auto V (2013)</h3>
+                    <p>Un vasto mundo abierto donde puedes vivir las vidas interconectadas de tres criminales en la metrópolis de Los Santos, planificando atracos y sembrando el caos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Red+Dead+Redemption" alt="Red Dead Redemption - PS3">
+                    <h3>Red Dead Redemption (2010)</h3>
+                    <p>Un épico western de mundo abierto. Sigue la historia de John Marston en su búsqueda de su pasado y su redención a través de las vastas llanuras del Salvaje Oeste.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Uncharted+2+Among+Thieves" alt="Uncharted 2: Among Thieves - PS3">
+                    <h3>Uncharted 2: Among Thieves (2009)</h3>
+                    <p>Una aclamada aventura de acción cinematográfica que lleva a Nathan Drake en una búsqueda llena de intriga, tiroteos y saltos espectaculares por todo el mundo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Metal+Gear+Solid+4" alt="Metal Gear Solid 4 - PS3">
+                    <h3>Metal Gear Solid 4: Guns of the Patriots (2008)</h3>
+                    <p>La culminación de la saga de Solid Snake, un épico juego de sigilo y acción con una narrativa profunda y una dirección artística inigualable.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=God+of+War+III" alt="God of War III - PS3">
+                    <h3>God of War III (2010)</h3>
+                    <p>Kratos desata su furia contra los dioses del Olimpo en una brutal y masiva aventura de acción, considerada la cúspide de la mitología griega en videojuegos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Skyrim" alt="The Elder Scrolls V: Skyrim - PS3">
+                    <h3>The Elder Scrolls V: Skyrim (2011)</h3>
+                    <p>Un inmenso RPG de mundo abierto que te permite explorar una tierra de fantasía llena de dragones, magia y aventuras. Tú decides tu destino como Sangre de Dragón.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Batman+Arkham+City" alt="Batman: Arkham City - PS3">
+                    <h3>Batman: Arkham City (2011)</h3>
+                    <p>Un aclamado juego de acción y aventura en el que asumes el papel del Caballero Oscuro para proteger Gotham de una plaga de supervillanos en una ciudad amurallada.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=BioShock+Infinite" alt="BioShock Infinite - PS3">
+                    <h3>BioShock Infinite (2013)</h3>
+                    <p>Viaja a la ciudad flotante de Columbia en este aclamado shooter en primera persona con una trama compleja, personajes fascinantes y un apartado visual único.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Demon's+Souls" alt="Demon's Souls - PS3">
+                    <h3>Demon's Souls (2009)</h3>
+                    <p>El juego que inició la moda de los "Souls", un desafiante RPG de acción que te sumerge en un mundo oscuro y lleno de peligros, donde la paciencia es clave para la victoria.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Persona+5" alt="Persona 5 - PS3">
+                    <h3>Persona 5 (2016)</h3>
+                    <p>Un RPG japonés de culto que combina la vida escolar en Tokio con la lucha contra la corrupción de la sociedad, todo con un estilo artístico inigualable.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Mass+Effect+2" alt="Mass Effect 2 - PS3">
+                    <h3>Mass Effect 2 (2010)</h3>
+                    <p>Considerado una de las mejores óperas espaciales de los videojuegos. Lidera una tripulación en una misión suicida para salvar a la galaxia.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ni+no+Kuni" alt="Ni no Kuni - PS3">
+                    <h3>Ni no Kuni: Wrath of the White Witch (2011)</h3>
+                    <p>Un encantador RPG desarrollado por Level-5 en colaboración con Studio Ghibli. Vive una aventura mágica con Oliver para salvar a su madre.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=LittleBigPlanet+3" alt="LittleBigPlanet 3 - PS3">
+                    <h3>LittleBigPlanet 3 (2014)</h3>
+                    <p>Una aventura de plataformas creativa donde los jugadores pueden explorar, crear y compartir sus propios niveles en un mundo de "artes y manualidades".</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Dark+Souls" alt="Dark Souls - PS3">
+                    <h3>Dark Souls (2011)</h3>
+                    <p>El legendario juego de rol que definió un género. Conviértete en un no-muerto y explora el vasto reino de Lordran, luchando contra enemigos desafiantes y poderosos jefes.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Heavy+Rain" alt="Heavy Rain - PS3">
+                    <h3>Heavy Rain (2010)</h3>
+                    <p>Un thriller psicológico interactivo donde las decisiones del jugador afectan directamente a la trama. Resuelve el misterio del "Asesino del Origami".</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Tomb+Raider+2013" alt="Tomb Raider (2013) - PS3">
+                    <h3>Tomb Raider (2013)</h3>
+                    <p>El reinicio de la saga que narra los orígenes de Lara Croft, una joven e inexperta aventurera que debe luchar por su supervivencia en una isla misteriosa.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Dragon+Age+Origins" alt="Dragon Age: Origins - PS3">
+                    <h3>Dragon Age: Origins (2009)</h3>
+                    <p>Un épico RPG de fantasía de BioWare. Conviértete en un Héroe de Ferelden y une a un grupo de personajes memorables para detener una plaga oscura.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Fallout+New+Vegas" alt="Fallout: New Vegas - PS3">
+                    <h3>Fallout: New Vegas (2010)</h3>
+                    <p>Un RPG post-apocalíptico de mundo abierto en el desierto de Mojave. El destino de la región depende de las decisiones del jugador en esta aclamada aventura.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Journey" alt="Journey - PS3">
+                    <h3>Journey (2012)</h3>
+                    <p>Una experiencia de juego única y poética. Un viaje visual y emocional a través de un vasto desierto, con una banda sonora inolvidable y la posibilidad de encontrarte con otros jugadores.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Dishonored" alt="Dishonored - PS3">
+                    <h3>Dishonored (2012)</h3>
+                    <p>Un juego de sigilo y acción en primera persona que te pone en el papel de Corvo Attano, un guardaespaldas deshonrado con poderes sobrenaturales en una ciudad plagada por la peste.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Dead+Space+2" alt="Dead Space 2 - PS3">
+                    <h3>Dead Space 2 (2011)</h3>
+                    <p>Un aterrador shooter de supervivencia en tercera persona. Lucha contra los necromorfos en la estación espacial Sprawl y descubre la verdad detrás de la infección.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Infamous+2" alt="Infamous 2 - PS3">
+                    <h3>Infamous 2 (2011)</h3>
+                    <p>Un juego de acción y mundo abierto donde controlas a Cole MacGrath, un superhéroe con poderes eléctricos, y debes decidir si usas tus habilidades para el bien o el mal.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Kingdom+Hearts+HD+1.5+ReMIX" alt="Kingdom Hearts HD 1.5 ReMIX - PS3">
+                    <h3>Kingdom Hearts HD 1.5 ReMIX (2013)</h3>
+                    <p>Una colección remasterizada que incluye las primeras aventuras de Sora, Donald y Goofy, fusionando los mundos de Final Fantasy y Disney en un épico RPG de acción.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Killzone+3" alt="Killzone 3 - PS3">
+                    <h3>Killzone 3 (2011)</h3>
+                    <p>Un intenso shooter en primera persona de ciencia ficción. Únete a la batalla contra los Helghast en su planeta natal con nuevas armas y mecánicas de combate.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Metal+Gear+Solid+HD+Collection" alt="Metal Gear Solid HD Collection - PS3">
+                    <h3>Metal Gear Solid HD Collection (2011)</h3>
+                    <p>Una colección remasterizada que incluye los clásicos Metal Gear Solid 2: Sons of Liberty y Metal Gear Solid 3: Snake Eater, así como los títulos originales de MSX.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Assassin's+Creed+IV" alt="Assassin's Creed IV: Black Flag - PS3">
+                    <h3>Assassin's Creed IV: Black Flag (2013)</h3>
+                    <p>Conviértete en un pirata asesino en el Caribe del siglo XVIII. Un juego de mundo abierto que combina el sigilo con épicas batallas navales y la exploración de islas exóticas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Final+Fantasy+X" alt="Final Fantasy X/X-2 HD Remaster - PS3">
+                    <h3>Final Fantasy X/X-2 HD Remaster (2013)</h3>
+                    <p>Vive las historias de Tidus y Yuna en esta aclamada colección de RPGs, con gráficos mejorados y contenido adicional para una experiencia inolvidable.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Vanquish" alt="Vanquish - PS3">
+                    <h3>Vanquish (2010)</h3>
+                    <p>Un frenético shooter en tercera persona con un combate rápido y espectacular. Usa tu traje de batalla para deslizarte a gran velocidad y enfrentarte a oleadas de robots enemigos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=MotorStorm+Apocalypse" alt="MotorStorm: Apocalypse - PS3">
+                    <h3>MotorStorm: Apocalypse (2011)</h3>
+                    <p>Un juego de carreras off-road en un mundo post-apocalíptico en constante destrucción. Compite en carreras caóticas mientras los desastres naturales cambian el circuito.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+            </div>
+        </div>
+
+        <a id="ps1-ancla"></a>
+        <div class="plataforma-section">
+            <h2>PlayStation 1</h2>
+            <div class="grid-container">
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Final+Fantasy+VII" alt="Final Fantasy VII - PS1">
+                    <h3>Final Fantasy VII (1997)</h3>
+                    <p>Un RPG que cambió la industria, narra la historia de Cloud Strife y sus compañeros en su lucha contra la malvada corporación Shinra y el legendario Sefirot.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Metal+Gear+Solid" alt="Metal Gear Solid - PS1">
+                    <h3>Metal Gear Solid (1998)</h3>
+                    <p>Un clásico de culto que popularizó el género del sigilo. Juega como Solid Snake y desmantela una amenaza nuclear en una base secreta de Alaska.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Resident+Evil+2" alt="Resident Evil 2 - PS1">
+                    <h3>Resident Evil 2 (1998)</h3>
+                    <p>El clásico del survival horror que definió el género. Sobrevive al brote de zombies en Raccoon City como Leon Kennedy o Claire Redfield, resolviendo puzles y luchando por tu vida.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Chrono+Cross" alt="Chrono Cross - PS1">
+                    <h3>Chrono Cross (1999)</h3>
+                    <p>Una obra maestra del RPG. Viaja entre dimensiones con Serge y un grupo de más de 40 personajes jugables para desentrañar un misterio que afecta a la existencia misma.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Tekken+3" alt="Tekken 3 - PS1">
+                    <h3>Tekken 3 (1998)</h3>
+                    <p>Considerado uno de los mejores juegos de lucha de todos los tiempos. Un combate 3D fluido, personajes carismáticos y una gran variedad de modos de juego.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Castlevania+SOTN" alt="Castlevania: Symphony of the Night - PS1">
+                    <h3>Castlevania: Symphony of the Night (1997)</h3>
+                    <p>Un hito del género "Metroidvania". Explora el vasto castillo de Drácula como Alucard, el hijo de Drácula, descubriendo secretos y mejorando tus habilidades.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Silent+Hill" alt="Silent Hill - PS1">
+                    <h3>Silent Hill (1999)</h3>
+                    <p>Uno de los juegos de terror psicológico más influyentes. Busca a tu hija en el misterioso y neblinoso pueblo de Silent Hill, enfrentando pesadillas y horrores inimaginables.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Gran+Turismo+2" alt="Gran Turismo 2 - PS1">
+                    <h3>Gran Turismo 2 (1999)</h3>
+                    <p>Un simulador de conducción que estableció nuevos estándares en la consola. Con más de 600 coches, este juego es la encarnación del "real driving simulator".</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Spyro+the+Dragon" alt="Spyro the Dragon - PS1">
+                    <h3>Spyro the Dragon (1998)</h3>
+                    <p>Un encantador juego de plataformas en 3D. Controla al valiente dragón Spyro y salta, embiste y escupe fuego para liberar a tus amigos dragones de la magia de Gnasty Gnorc.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Crash+Bandicoot+3" alt="Crash Bandicoot 3: Warped - PS1">
+                    <h3>Crash Bandicoot: Warped (1998)</h3>
+                    <p>Un juego de plataformas frenético y lleno de diversión. Viaja en el tiempo con Crash y Coco para detener los planes del Dr. Neo Cortex.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Tomb+Raider" alt="Tomb Raider - PS1">
+                    <h3>Tomb Raider (1996)</h3>
+                    <p>La aventura original de Lara Croft. Explora antiguas ruinas, resuelve puzles y lucha contra animales salvajes en una de las sagas más icónicas de la historia.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Syphon+Filter" alt="Syphon Filter - PS1">
+                    <h3>Syphon Filter (1999)</h3>
+                    <p>Un emocionante juego de acción y sigilo en tercera persona. Juega como el agente especial Gabe Logan y desmantela una conspiración global para liberar un virus mortal.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Final+Fantasy+IX" alt="Final Fantasy IX - PS1">
+                    <h3>Final Fantasy IX (2000)</h3>
+                    <p>Un retorno a las raíces de la fantasía clásica. Sigue la historia del ladrón Yitán y la princesa Garnet en una búsqueda para salvar el mundo de Gaia.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Parasite+Eve" alt="Parasite Eve - PS1">
+                    <h3>Parasite Eve (1998)</h3>
+                    <p>Una mezcla de RPG y survival horror. Juega como la detective Aya Brea en Nueva York y lucha contra una criatura misteriosa que hace que los humanos muten.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Legacy+of+Kain+Soul+Reaver" alt="Legacy of Kain: Soul Reaver - PS1">
+                    <h3>Legacy of Kain: Soul Reaver (1999)</h3>
+                    <p>Una oscura aventura de acción. Controla a Raziel, un vampiro espectral que busca venganza contra su creador, Kain, en el mundo de Nosgoth.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Tony+Hawk's+Pro+Skater+2" alt="Tony Hawk's Pro Skater 2 - PS1">
+                    <h3>Tony Hawk's Pro Skater 2 (2000)</h3>
+                    <p>Un juego de skate que definió una generación. Realiza trucos increíbles en diversos escenarios, compite y crea tus propios parques en un título arcade perfecto.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Driver" alt="Driver - PS1">
+                    <h3>Driver (1999)</h3>
+                    <p>Un juego de conducción en mundo abierto. Conviértete en un policía encubierto y conduce a toda velocidad por ciudades icónicas para infiltrarte en una organización criminal.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Rayman" alt="Rayman - PS1">
+                    <h3>Rayman (1995)</h3>
+                    <p>Un colorido y desafiante juego de plataformas en 2D. Ayuda a Rayman a restaurar el equilibrio en su mundo, que ha sido invadido por el malvado Mr. Dark.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Dino+Crisis" alt="Dino Crisis - PS1">
+                    <h3>Dino Crisis (1999)</h3>
+                    <p>Un survival horror del creador de Resident Evil, pero con dinosaurios. Sobrevive a la amenaza de los velocirraptores en una isla llena de secretos mortales.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=MediEvil" alt="MediEvil - PS1">
+                    <h3>MediEvil (1998)</h3>
+                    <p>Una aventura de acción y humor gótico. Juega como Sir Daniel Fortesque, un caballero zombi que tiene una segunda oportunidad para convertirse en un héroe.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Wipeout+XL" alt="Wipeout XL - PS1">
+                    <h3>Wipeout XL (1996)</h3>
+                    <p>Un juego de carreras futurista y de alta velocidad. Pilota naves anti-gravedad en circuitos vibrantes y llenos de adrenalina, con una banda sonora electrónica icónica.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Crash+Team+Racing" alt="Crash Team Racing - PS1">
+                    <h3>Crash Team Racing (1999)</h3>
+                    <p>El juego de carreras de karts de Crash Bandicoot. Compite con tus personajes favoritos en pistas llenas de trampas y potenciadores.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Spyro+2+Ripto's+Rage" alt="Spyro 2: Ripto's Rage! - PS1">
+                    <h3>Spyro 2: Ripto's Rage! (1999)</h3>
+                    <p>Una secuela mejorada del original. Acompaña a Spyro en una nueva aventura con más habilidades, personajes carismáticos y un mundo más grande para explorar.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Vagrant+Story" alt="Vagrant Story - PS1">
+                    <h3>Vagrant Story (2000)</h3>
+                    <p>Un RPG de acción con una narrativa compleja y un sistema de combate único. Controla a Ashley Riot, un agente que investiga un misterio en la ciudad de Lea Monde.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Xenogears" alt="Xenogears - PS1">
+                    <h3>Xenogears (1998)</h3>
+                    <p>Un RPG de culto con una trama de ciencia ficción y filosofía. Sigue a Fei Fong Wong en su viaje para descubrir la verdad detrás de su pasado y la guerra de robots gigantes.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=PaRappa+the+Rapper" alt="PaRappa the Rapper - PS1">
+                    <h3>PaRappa the Rapper (1996)</h3>
+                    <p>Un divertido y original juego de ritmo. Ayuda a PaRappa, un perro rapero, a ganar el corazón de su amada a través de batallas de rap con personajes excéntricos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ape+Escape" alt="Ape Escape - PS1">
+                    <h3>Ape Escape (1999)</h3>
+                    <p>El primer juego de PlayStation que requirió el uso del stick analógico dual. Captura monos con artilugios futuristas y detén sus planes de dominar el mundo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Tomba!" alt="Tomba! - PS1">
+                    <h3>Tomba! (1997)</h3>
+                    <p>Un juego de plataformas de desplazamiento lateral con elementos de RPG. Juega como Tomba, un hombre de las cavernas de pelo rosa que debe recuperar el collar de su abuelo de los Cerdos Malvados.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Wild+Arms" alt="Wild Arms - PS1">
+                    <h3>Wild Arms (1996)</h3>
+                    <p>Un RPG de fantasía con temática del Salvaje Oeste. Sigue a un trío de aventureros en una búsqueda para salvar el mundo de Filgaia de la destrucción.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Grand+Theft+Auto" alt="Grand Theft Auto - PS1">
+                    <h3>Grand Theft Auto (1997)</h3>
+                    <p>El juego original que lo empezó todo. Causa estragos en un mundo abierto en vista cenital, roba coches y completa misiones para ascender en el mundo del crimen.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+            </div>
+        </div>
+
+        <a id="snes-ancla"></a>
+        <div class="plataforma-section">
+            <h2>Super Nintendo</h2>
+            <div class="grid-container">
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Super+Mario+World" alt="Super Mario World - SNES">
+                    <h3>Super Mario World (1990)</h3>
+                    <p>Un clásico de plataformas que elevó la serie a nuevas alturas. Acompaña a Mario y a su fiel amigo Yoshi en una aventura por Dinosaur Land para salvar a la Princesa Peach.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=The+Legend+of+Zelda+ALttP" alt="The Legend of Zelda: A Link to the Past - SNES">
+                    <h3>The Legend of Zelda: A Link to the Past (1991)</h3>
+                    <p>Una obra maestra de la aventura. Explora los mundos de Hyrule y el Reino Oscuro para derrotar al malvado hechicero Agahnim y salvar a la princesa Zelda.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Chrono+Trigger" alt="Chrono Trigger - SNES">
+                    <h3>Chrono Trigger (1995)</h3>
+                    <p>Considerado uno de los mejores RPG de la historia. Viaja en el tiempo con Crono y sus amigos para detener una catástrofe que destruirá el futuro del mundo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Super+Metroid" alt="Super Metroid - SNES">
+                    <h3>Super Metroid (1994)</h3>
+                    <p>Un hito en la exploración de videojuegos. Vuelve a control de Samus Aran en el planeta Zebes, donde debes encontrar a un Metroid bebé y derrotar a la Mother Brain.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Final+Fantasy+VI" alt="Final Fantasy VI - SNES">
+                    <h3>Final Fantasy VI (1994)</h3>
+                    <p>Una épica historia de fantasía y tecnología. Sigue a un grupo de rebeldes en su lucha contra el Imperio y el villano Kefka, en una narrativa madura y memorable.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Street+Fighter+II" alt="Street Fighter II Turbo - SNES">
+                    <h3>Street Fighter II Turbo (1992)</h3>
+                    <p>El juego que definió el género de lucha. Escoge entre un roster de 16 personajes, cada uno con sus propios movimientos especiales, y lucha en escenarios alrededor del mundo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Donkey+Kong+Country" alt="Donkey Kong Country - SNES">
+                    <h3>Donkey Kong Country (1994)</h3>
+                    <p>Un juego de plataformas con gráficos pre-renderizados que sorprendieron en su época. Controla a Donkey Kong y Diddy Kong para recuperar su tesoro de bananas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Super+Mario+Kart" alt="Super Mario Kart - SNES">
+                    <h3>Super Mario Kart (1992)</h3>
+                    <p>El juego que creó el género de carreras de karts. Compite con personajes de Mario en pistas temáticas, usando potenciadores para ganar ventaja.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=A+LttP" alt="Super Mario World 2: Yoshi's Island - SNES">
+                    <h3>Super Mario World 2: Yoshi's Island (1995)</h3>
+                    <p>Un juego de plataformas con un estilo artístico único y una jugabilidad innovadora, donde controlas a un Yoshi que carga a Baby Mario para salvar a su hermano Luigi.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=EarthBound" alt="EarthBound - SNES">
+                    <h3>EarthBound (1994)</h3>
+                    <p>Un RPG con un humor excéntrico y una ambientación de la cultura pop de los 90. Juega como Ness, un chico con poderes psíquicos, en una aventura para salvar el mundo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Secret+of+Mana" alt="Secret of Mana - SNES">
+                    <h3>Secret of Mana (1993)</h3>
+                    <p>Un RPG de acción con un sistema de combate en tiempo real y la posibilidad de jugar con hasta tres jugadores. Ayuda a un joven guerrero a restaurar el poder del Maná.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Mega+Man+X" alt="Mega Man X - SNES">
+                    <h3>Mega Man X (1993)</h3>
+                    <p>Un reinicio más maduro de la saga Mega Man. Juega como X, un androide avanzado, en su lucha contra los "Mavericks" en un futuro post-apocalíptico.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=F-Zero" alt="F-Zero - SNES">
+                    <h3>F-Zero (1990)</h3>
+                    <p>Un juego de carreras futurista que destacó por su velocidad y gráficos con el modo 7. Compite en pistas desafiantes a bordo de naves a toda velocidad.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Donkey+Kong+Country+2" alt="Donkey Kong Country 2 - SNES">
+                    <h3>Donkey Kong Country 2: Diddy's Kong Quest (1995)</h3>
+                    <p>Una secuela que mejoró al original en todos los aspectos. Controla a Diddy Kong y Dixie Kong para rescatar a Donkey Kong de las garras del Capitán K. Rool.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Mario+RPG" alt="Super Mario RPG: Legend of the Seven Stars - SNES">
+                    <h3>Super Mario RPG: Legend of the Seven Stars (1996)</h3>
+                    <p>El primer RPG de la saga Mario, desarrollado por Square. Combina el universo de Mario con la jugabilidad de un RPG por turnos, con un humor encantador.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Star+Fox" alt="Star Fox - SNES">
+                    <h3>Star Fox (1993)</h3>
+                    <p>Un shooter espacial 3D que usó el chip Super FX para revolucionar los gráficos en la consola. Ayuda a Fox McCloud y su equipo a derrotar al malvado Andross.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Teenage+Mutant+Ninja+Turtles+IV" alt="TMNT IV: Turtles in Time - SNES">
+                    <h3>Teenage Mutant Ninja Turtles IV: Turtles in Time (1992)</h3>
+                    <p>Un clásico beat 'em up arcade. Juega como las Tortugas Ninja y viaja en el tiempo para detener a Shredder y su banda de villanos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Super+Castlevania+IV" alt="Super Castlevania IV - SNES">
+                    <h3>Super Castlevania IV (1991)</h3>
+                    <p>Una reinvención de la aventura original de Castlevania. Juega como Simon Belmont y explora un castillo gótico con gráficos y sonido mejorados.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Kirby+Super+Star" alt="Kirby Super Star - SNES">
+                    <h3>Kirby Super Star (1996)</h3>
+                    <p>Una colección de 8 juegos de Kirby en uno. Un título de plataformas con una jugabilidad variada, desde aventuras hasta minijuegos cooperativos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Super+Pang" alt="Super Pang - SNES">
+                    <h3>Super Pang (1992)</h3>
+                    <p>Un juego arcade de puzles. Dispara a globos que rebotan para que se dividan en globos más pequeños, evitando que te toquen y limpiando la pantalla.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Terranigma" alt="Terranigma - SNES">
+                    <h3>Terranigma (1995)</h3>
+                    <p>Un RPG de acción que narra la historia de un joven que debe resucitar el mundo. Una aventura épica con una narrativa profunda y un sistema de combate rápido.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Pilotwings" alt="Pilotwings - SNES">
+                    <h3>Pilotwings (1990)</h3>
+                    <p>Un simulador de vuelo. Realiza diversas misiones de vuelo en diferentes vehículos, como un biplano, un cohete a reacción y un paracaídas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Super+Mario+All+Stars" alt="Super Mario All-Stars - SNES">
+                    <h3>Super Mario All-Stars (1993)</h3>
+                    <p>Una colección de los primeros juegos de Mario para NES, remasterizados con gráficos y sonidos mejorados. Un paquete esencial para cualquier fan.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=ActRaiser" alt="ActRaiser - SNES">
+                    <h3>ActRaiser (1990)</h3>
+                    <p>Un juego único que combina un simulador de creación de ciudades con un juego de acción de plataformas. Juega como un ángel que ayuda a su pueblo a prosperar.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Zombies+Ate+My+Neighbors" alt="Zombies Ate My Neighbors - SNES">
+                    <h3>Zombies Ate My Neighbors (1993)</h3>
+                    <p>Un juego de acción y humor. Tú y un amigo deben rescatar a sus vecinos de una horda de monstruos de películas de terror en un juego de disparos cenital.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Contra+III" alt="Contra III: The Alien Wars - SNES">
+                    <h3>Contra III: The Alien Wars (1992)</h3>
+                    <p>Un frenético juego de acción run-and-gun. Lucha contra una invasión alienígena con armas de gran potencia y un ritmo de juego imparable.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Demon's+Crest" alt="Demon's Crest - SNES">
+                    <h3>Demon's Crest (1994)</h3>
+                    <p>Un oscuro juego de plataformas. Juega como Firebrand, un demonio gárgola, y usa diferentes transformaciones para explorar el mundo y derrotar a otros demonios.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Kirby's+Dream+Course" alt="Kirby's Dream Course - SNES">
+                    <h3>Kirby's Dream Course (1994)</h3>
+                    <p>Un original juego de golf con Kirby. Usa las habilidades de Kirby para lanzar a tu personaje por el campo y atrapar a todos los enemigos para terminar el nivel.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Lufia+II" alt="Lufia II: Rise of the Sinistrals - SNES">
+                    <h3>Lufia II: Rise of the Sinistrals (1995)</h3>
+                    <p>Un RPG que destacó por sus puzles y un sistema de combate único. Acompaña a Maxim y sus compañeros en una aventura para detener a los Cuatro Sinistrals.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Super+Mario+World+Hacks" alt="Super Mario World Hacks - SNES">
+                    <h3>Super Mario World Hacks (Varios)</h3>
+                    <p>Una colección de niveles y juegos modificados de Super Mario World, creados por fans. Una oportunidad de disfrutar de una experiencia de plataformas totalmente nueva y creativa.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+            </div>
+        </div>
+
+        <a id="n64-ancla"></a>
+        <div class="plataforma-section">
+            <h2>Nintendo 64</h2>
+            <div class="grid-container">
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Super+Mario+64" alt="Super Mario 64 - N64">
+                    <h3>Super Mario 64 (1996)</h3>
+                    <p>El juego que revolucionó los plataformas 3D. Explora el castillo de la Princesa Peach, salta y corre a través de mundos mágicos para derrotar a Bowser y salvar a la princesa.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=The+Legend+of+Zelda+OOT" alt="The Legend of Zelda: Ocarina of Time - N64">
+                    <h3>The Legend of Zelda: Ocarina of Time (1998)</h3>
+                    <p>Considerado por muchos el mejor juego de la historia. Viaja en el tiempo con Link para detener a Ganondorf y salvar a Hyrule de la oscuridad.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=GoldenEye+007" alt="GoldenEye 007 - N64">
+                    <h3>GoldenEye 007 (1997)</h3>
+                    <p>El shooter en primera persona que cambió la industria. Juega como James Bond y completa misiones de sigilo y acción, con un icónico modo multijugador.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Mario+Kart+64" alt="Mario Kart 64 - N64">
+                    <h3>Mario Kart 64 (1996)</h3>
+                    <p>El clásico de carreras de karts de Nintendo en 3D. Compite con tus amigos en pistas llenas de objetos y atajos para llegar a la meta.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Super+Smash+Bros" alt="Super Smash Bros. - N64">
+                    <h3>Super Smash Bros. (1999)</h3>
+                    <p>El juego de lucha de Nintendo que reunió a los personajes más icónicos de la compañía. Lucha contra tus amigos en escenarios dinámicos y divertidos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Banjo-Kazooie" alt="Banjo-Kazooie - N64">
+                    <h3>Banjo-Kazooie (1998)</h3>
+                    <p>Un juego de plataformas 3D de Rare. Controla al oso Banjo y a su amiga, el pájaro Kazooie, para explorar mundos llenos de secretos y puzles.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Star+Fox+64" alt="Star Fox 64 - N64">
+                    <h3>Star Fox 64 (1997)</h3>
+                    <p>Un shooter espacial que mejoró al original en todos los aspectos. Con voces, cinemáticas y una jugabilidad más fluida, es una aventura espacial inolvidable.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Conker's+Bad+Fur+Day" alt="Conker's Bad Fur Day - N64">
+                    <h3>Conker's Bad Fur Day (2001)</h3>
+                    <p>Un juego de plataformas para adultos. Juega como una ardilla bebedora y malhablada en una aventura llena de humor negro, parodias de películas y violencia.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Paper+Mario" alt="Paper Mario - N64">
+                    <h3>Paper Mario (2000)</h3>
+                    <p>Un RPG de Mario con un estilo visual de libro de cuentos. Resuelve puzles y lucha en combates por turnos con la ayuda de compañeros para detener a Bowser.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Perfect+Dark" alt="Perfect Dark - N64">
+                    <h3>Perfect Dark (2000)</h3>
+                    <p>Una secuela espiritual de GoldenEye 007. Juega como la agente Joanna Dark en un shooter de ciencia ficción con una campaña y un multijugador excelentes.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Diddy+Kong+Racing" alt="Diddy Kong Racing - N64">
+                    <h3>Diddy Kong Racing (1997)</h3>
+                    <p>Un juego de carreras de karts de Rare. Compite en pistas con coches, aerodeslizadores y aviones, con un modo aventura y una historia interesante.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Pokemon+Stadium" alt="Pokemon Stadium - N64">
+                    <h3>Pokémon Stadium (1999)</h3>
+                    <p>Lleva a tus Pokémon de Game Boy a la gran pantalla. Lucha en torneos 3D con tus Pokémon favoritos, con minijuegos y desafíos para un jugador.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=F-Zero+X" alt="F-Zero X - N64">
+                    <h3>F-Zero X (1998)</h3>
+                    <p>La secuela del clásico de SNES. Un juego de carreras con gráficos en 3D, una velocidad de vértigo y un modo multijugador para 4 jugadores.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Wave+Race+64" alt="Wave Race 64 - N64">
+                    <h3>Wave Race 64 (1996)</h3>
+                    <p>Un simulador de carreras de motos acuáticas. Destacó por sus físicas del agua y un gameplay divertido y adictivo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Mario+Party+2" alt="Mario Party 2 - N64">
+                    <h3>Mario Party 2 (1999)</h3>
+                    <p>La secuela del juego de tablero de Nintendo. Juega con tus amigos en un tablero temático, compitiendo en minijuegos y recolectando estrellas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Star+Wars+Rogue+Squadron" alt="Star Wars: Rogue Squadron - N64">
+                    <h3>Star Wars: Rogue Squadron (1998)</h3>
+                    <p>Un simulador de vuelo espacial. Juega como Luke Skywalker y pilotea icónicas naves de la saga Star Wars para derrotar al Imperio Galáctico.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Jet+Force+Gemini" alt="Jet Force Gemini - N64">
+                    <h3>Jet Force Gemini (1999)</h3>
+                    <p>Un juego de acción y aventura de Rare. Controla a un equipo de tres héroes para detener a un ejército de insectos alienígenas en una galaxia lejana.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Donkey+Kong+64" alt="Donkey Kong 64 - N64">
+                    <h3>Donkey Kong 64 (1999)</h3>
+                    <p>Un juego de plataformas 3D con un mundo vasto para explorar. Controla a cinco personajes diferentes, cada uno con sus propias habilidades, para detener al malvado King K. Rool.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Kirby+64" alt="Kirby 64: The Crystal Shards - N64">
+                    <h3>Kirby 64: The Crystal Shards (2000)</h3>
+                    <p>El primer juego de Kirby en 3D. Usa las habilidades de Kirby para combinar poderes y derrotar a un nuevo enemigo que ha invadido la galaxia.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Turok+2" alt="Turok 2: Seeds of Evil - N64">
+                    <h3>Turok 2: Seeds of Evil (1998)</h3>
+                    <p>Un shooter en primera persona con dinosaurios. Juega como el guerrero Turok y lucha contra una invasión alienígena en un mundo lleno de criaturas prehistóricas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Goemon's+Great+Adventure" alt="Goemon's Great Adventure - N64">
+                    <h3>Goemon's Great Adventure (1998)</h3>
+                    <p>Un divertido juego de plataformas. Juega como el ninja Goemon y su equipo, explorando niveles con un estilo artístico japonés único.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Blast+Corps" alt="Blast Corps - N64">
+                    <h3>Blast Corps (1997)</h3>
+                    <p>Un juego de acción y puzles. Usa vehículos de demolición para despejar el camino de un camión nuclear fuera de control, en una carrera contra el tiempo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Gauntlet+Legends" alt="Gauntlet Legends - N64">
+                    <h3>Gauntlet Legends (1999)</h3>
+                    <p>Un dungeon crawler de fantasía. Juega con tus amigos y elige entre cuatro clases para luchar contra monstruos y recolectar tesoros en mazmorras llenas de trampas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Hybrid+Heaven" alt="Hybrid Heaven - N64">
+                    <h3>Hybrid Heaven (1999)</h3>
+                    <p>Una mezcla única de RPG y juego de acción. Juega como un agente especial que investiga una base subterránea, luchando en un sistema de combate único.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Excitebike+64" alt="Excitebike 64 - N64">
+                    <h3>Excitebike 64 (2000)</h3>
+                    <p>Un juego de carreras de motos. Compite en pistas de tierra con trucos y saltos, con un editor de pistas y un modo de carreras de estilo libre.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Pilotwings+64" alt="Pilotwings 64 - N64">
+                    <h3>Pilotwings 64 (1996)</h3>
+                    <p>Una secuela mejorada del original. Pilotea diferentes vehículos y completa misiones de vuelo en un mundo 3D lleno de lugares para explorar.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Mystical+Ninja+64" alt="Mystical Ninja Starring Goemon - N64">
+                    <h3>Mystical Ninja Starring Goemon (1997)</h3>
+                    <p>Una aventura de acción con un estilo japonés. Juega como el ninja Goemon y su equipo, viajando por Japón para detener una amenaza alienígena.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Beetle+Adventure+Racing" alt="Beetle Adventure Racing - N64">
+                    <h3>Beetle Adventure Racing (1999)</h3>
+                    <p>Un juego de carreras de escarabajos Volkswagen. Compite en pistas con atajos y secretos, en un juego con una jugabilidad arcade muy divertida.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=The+World+is+Not+Enough" alt="007: The World is Not Enough - N64">
+                    <h3>007: The World is Not Enough (2000)</h3>
+                    <p>Un shooter en primera persona basado en la película de James Bond. Completa misiones de espionaje y acción, con un modo multijugador para hasta 4 jugadores.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Star+Wars+Episode+1+Racer" alt="Star Wars: Episode I Racer - N64">
+                    <h3>Star Wars: Episode I Racer (1999)</h3>
+                    <p>Un juego de carreras de vainas de Star Wars. Corre a velocidades de vértigo en planetas exóticos, compitiendo en una carrera para ser el mejor piloto de la galaxia.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+            </div>
+        </div>
+        cha en un sistema de combate de combos<a id="genesis-ancla"></a>
+        <div class="plataforma-section">
+            <h2>Sega Genesis</h2>
+            <div class="grid-container">
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Sonic+the+Hedgehog+2" alt="Sonic the Hedgehog 2 - Genesis">
+                    <h3>Sonic the Hedgehog 2</h3>
+                    <p>La aclamada secuela que elevó la velocidad y la acción de Sonic. Une fuerzas con Tails para derrotar al Dr. Robotnik, recolectando las Chaos Emeralds y corriendo a velocidades de vértigo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Streets+of+Rage+2" alt="Streets of Rage 2 - Genesis">
+                    <h3>Streets of Rage 2</h3>
+                    <p>Uno de los mejores beat 'em up de la historia. Elige entre cuatro luchadores y lucha contra las pandillas de Mr. X en la ciudad para rescatar a sus amigos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Gunstar+Heroes" alt="Gunstar Heroes - Genesis">
+                    <h3>Gunstar Heroes</h3>
+                    <p>Un frenético juego de acción run-and-gun. Lucha con un vasto arsenal de armas y combates contra enemigos gigantes en un título que destaca por su acción sin parar.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Phantasy+Star+IV" alt="Phantasy Star IV - Genesis">
+                    <h3>Phantasy Star IV</h3>
+                    <p>Un RPG de ciencia ficción de culto. Explora el sistema solar Algol, con una narrativa épica y personajes memorables en una aventura inolvidable.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Shining+Force+II" alt="Shining Force II - Genesis">
+                    <h3>Shining Force II</h3>
+                    <p>Un RPG táctico por turnos. Lidera a un grupo de héroes en una aventura para detener a un demonio de las profundidades, en una de las mejores joyas del género.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Contra+Hard+Corps" alt="Contra: Hard Corps - Genesis">
+                    <h3>Contra: Hard Corps</h3>
+                    <p>La versión de Contra para Genesis. Un juego de acción con un ritmo frenético, con jefes gigantes y una dificultad desafiante.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Castlevania+Bloodlines" alt="Castlevania: Bloodlines - Genesis">
+                    <h3>Castlevania: Bloodlines</h3>
+                    <p>La única entrega de Castlevania en Genesis. Juega como John Morris o Eric Lecarde y lucha contra el vampiro Drácula en Europa.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Mortal+Kombat+II" alt="Mortal Kombat II - Genesis">
+                    <h3>Mortal Kombat II</h3>
+                    <p>La aclamada secuela del juego de lucha. Con nuevos personajes, escenarios y fatalities, es la mejor versión del juego para la consola.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Sonic+3+and+Knuckles" alt="Sonic the Hedgehog 3 & Knuckles - Genesis">
+                    <h3>Sonic the Hedgehog 3 & Knuckles</h3>
+                    <p>La culminación de la trilogía de Sonic en Genesis. Un juego que se divide en dos partes y ofrece una jugabilidad más fluida y niveles más grandes.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Shinobi+III" alt="Shinobi III: Return of the Ninja Master - Genesis">
+                    <h3>Shinobi III: Return of the Ninja Master</h3>
+                    <p>Un juego de plataformas de acción. Juega como el ninja Joe Musashi y lucha contra el malvado Neo Zeed en un juego con una jugabilidad rápida y fluida.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Landstalker" alt="Landstalker - Genesis">
+                    <h3>Landstalker: The Treasures of King Nole</h3>
+                    <p>Un RPG de acción con una perspectiva isométrica. Juega como el elfo rastreador Nigel y explora una isla llena de mazmorras y puzles.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Wonder+Boy+in+Monster+World" alt="Wonder Boy in Monster World - Genesis">
+                    <h3>Wonder Boy in Monster World</h3>
+                    <p>Un juego de plataformas de acción con elementos de RPG. Juega como un joven héroe que debe salvar al mundo de un malvado dragón.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Comix+Zone" alt="Comix Zone - Genesis">
+                    <h3>Comix Zone</h3>
+                    <p>Un juego de acción y plataformas con un estilo artístico de cómic. Lucha contra villanos y resuelve puzles en un juego visualmente único.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Sonic+CD" alt="Sonic CD - Genesis">
+                    <h3>Sonic CD</h3>
+                    <p>Un juego de plataformas de Sonic con la capacidad de viajar en el tiempo. Viaja entre el pasado, presente y futuro para detener al Dr. Robotnik.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=ToeJam+and+Earl" alt="ToeJam & Earl - Genesis">
+                    <h3>ToeJam & Earl</h3>
+                    <p>Un juego de exploración y humor con una perspectiva isométrica. Juega como dos alienígenas que se estrellan en la Tierra y deben recolectar las piezas de su nave.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Aladdin" alt="Aladdin - Genesis">
+                    <h3>Aladdin</h3>
+                    <p>Un juego de plataformas basado en la película de Disney. Juega como Aladdin y corre, salta y lucha a través de Agrabah en una aventura mágica.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ristar" alt="Ristar - Genesis">
+                    <h3>Ristar</h3>
+                    <p>Un colorido juego de plataformas. Juega como Ristar, una estrella con brazos extensibles, y viaja por la galaxia para liberar planetas de la tiranía.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Street+of+Rage" alt="Streets of Rage - Genesis">
+                    <h3>Streets of Rage</h3>
+                    <p>El juego de beat 'em up original. Lucha contra pandillas en la ciudad para derrocar al sindicato del crimen de Mr. X.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Golden+Axe" alt="Golden Axe - Genesis">
+                    <h3>Golden Axe</h3>
+                    <p>Un beat 'em up de fantasía. Elige entre tres héroes y lucha contra el ejército del malvado Death Adder en una aventura épica.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ecco+the+Dolphin" alt="Ecco the Dolphin - Genesis">
+                    <h3>Ecco the Dolphin</h3>
+                    <p>Un juego de aventura y puzles. Juega como un delfín que debe viajar en el tiempo para salvar a su familia de una criatura alienígena.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Shadow+of+the+Beast" alt="Shadow of the Beast - Genesis">
+                    <h3>Shadow of the Beast</h3>
+                    <p>Un juego de plataformas y acción. Juega como Aarbron, un ser mutado, en su lucha contra un malvado hechicero en una aventura de fantasía oscura.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Vectorman" alt="Vectorman - Genesis">
+                    <h3>Vectorman</h3>
+                    <p>Un juego de plataformas de acción. Juega como un robot de limpieza que debe salvar a la Tierra de un malvado robot que la ha contaminado.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Kid+Chameleon" alt="Kid Chameleon - Genesis">
+                    <h3>Kid Chameleon</h3>
+                    <p>Un juego de plataformas. Juega como un chico que puede transformarse en diferentes personajes para luchar contra un villano en un juego de realidad virtual.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Rocket+Knight+Adventures" alt="Rocket Knight Adventures - Genesis">
+                    <h3>Rocket Knight Adventures</h3>
+                    <p>Un juego de plataformas de acción. Juega como un caballero con un jetpack y lucha contra un ejército de cerdos en una aventura de fantasía.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Desert+Strike" alt="Desert Strike: Return to the Gulf - Genesis">
+                    <h3>Desert Strike: Return to the Gulf</h3>
+                    <p>Un juego de acción con vista cenital. Pilota un helicóptero Apache y completa misiones en el desierto para derrotar a un tirano.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=The+Revenge+of+Shinobi" alt="The Revenge of Shinobi - Genesis">
+                    <h3>The Revenge of Shinobi</h3>
+                    <p>La secuela del clásico de Sega. Juega como el ninja Joe Musashi y lucha contra el sindicato criminal de Neo Zeed para salvar a su amada.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Zombies" alt="Zombies - Genesis">
+                    <h3>Zombies</h3>
+                    <p>Un juego de acción y puzles. Lucha contra hordas de zombies en una aventura de vista cenital, recolectando objetos y resolviendo puzles.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Golden+Axe+II" alt="Golden Axe II - Genesis">
+                    <h3>Golden Axe II</h3>
+                    <p>La secuela del clásico de fantasía. Lucha contra el ejército de Dark Guld en una aventura de beat 'em up para dos jugadores.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Dynamite+Headdy" alt="Dynamite Headdy - Genesis">
+                    <h3>Dynamite Headdy</h3>
+                    <p>Un juego de plataformas de acción. Juega como un títere que puede lanzar su cabeza para atacar a los enemigos y resolver puzles.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Streets+of+Rage+3" alt="Streets of Rage 3 - Genesis">
+                    <h3>Streets of Rage 3</h3>
+                    <p>La última entrega de la trilogía original. Juega con nuevos personajes y lucha contra un ejército de robots en la ciudad, con una trama más oscura y desafiante.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+            </div> 
+            <div style="text-align: center; margin-top: 20px;">
+    <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+</div>
+
+        </div>
+
+        <a id="nes-ancla"></a>
+        <div class="plataforma-section">
+            <h2>Nintendo Entertainment System (NES)</h2>
+            <div class="grid-container">
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Super+Mario+Bros." alt="Super Mario Bros. - NES">
+                    <h3>Super Mario Bros.</h3>
+                    <p>El juego que salvó la industria de los videojuegos. Salta a través del Reino Champiñón, pisando Goombas y rescatando a la Princesa Peach de Bowser.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=The+Legend+of+Zelda" alt="The Legend of Zelda - NES">
+                    <h3>The Legend of Zelda</h3>
+                    <p>La aventura original que sentó las bases para el género de acción y aventura. Explora Hyrule, encuentra mazmorras y derrota a Ganon para salvar a la princesa.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Metroid" alt="Metroid - NES">
+                    <h3>Metroid</h3>
+                    <p>Un juego de ciencia ficción que te pone en la piel de Samus Aran. Explora el planeta Zebes en una aventura solitaria y aterradora, luchando contra monstruos y descubriendo secretos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Castlevania" alt="Castlevania - NES">
+                    <h3>Castlevania</h3>
+                    <p>Una aventura de acción gótica. Juega como Simon Belmont y explora el castillo de Drácula, enfrentándote a horrores clásicos como momias y hombres lobo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Mega+Man+2" alt="Mega Man 2 - NES">
+                    <h3>Mega Man 2</h3>
+                    <p>Considerado el mejor juego de la saga original. Juega como el héroe robot Mega Man y derrota a 8 nuevos Robot Masters, absorbiendo sus habilidades para usarlas a tu favor.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Final+Fantasy" alt="Final Fantasy - NES">
+                    <h3>Final Fantasy</h3>
+                    <p>El RPG que lo empezó todo. Crea tu propio grupo de cuatro aventureros y viaja por un mundo de fantasía para restaurar la luz en los cristales elementales.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Duck+Hunt" alt="Duck Hunt - NES">
+                    <h3>Duck Hunt</h3>
+                    <p>Un juego de disparos clásico que usaba la Zapper de Nintendo. Dispara a los patos que vuelan por la pantalla con un perro que se ríe de ti cuando fallas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Punch-Out!" alt="Mike Tyson's Punch-Out!! - NES">
+                    <h3>Mike Tyson's Punch-Out!!</h3>
+                    <p>Un juego de boxeo con personajes carismáticos y una dificultad desafiante. Lucha contra una serie de boxeadores peculiares hasta enfrentarte al mismísimo Mike Tyson.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Contra" alt="Contra - NES">
+                    <h3>Contra</h3>
+                    <p>Un frenético juego de acción run-and-gun. Lucha contra una horda de alienígenas y enemigos en una isla remota, con un arsenal de armas poderosas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Kirby's+Adventure" alt="Kirby's Adventure - NES">
+                    <h3>Kirby's Adventure</h3>
+                    <p>La primera gran aventura de Kirby. Absorbe los poderes de tus enemigos para usarlos a tu favor en una aventura colorida y divertida para todas las edades.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Tecmo+Super+Bowl" alt="Tecmo Super Bowl - NES">
+                    <h3>Tecmo Super Bowl</h3>
+                    <p>Un juego de fútbol americano que se convirtió en un clásico de culto. Con jugadores y equipos reales, es uno de los mejores juegos deportivos de la consola.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Dr.+Mario" alt="Dr. Mario - NES">
+                    <h3>Dr. Mario</h3>
+                    <p>Un juego de puzles de Dr. Mario. Elimina virus de la pantalla al combinar píldoras del mismo color en un juego adictivo y desafiante.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Excitebike" alt="Excitebike - NES">
+                    <h3>Excitebike</h3>
+                    <p>Un juego de carreras de motos de motocross. Salta, acelera y usa el turbo para llegar a la meta en pistas llenas de baches y rampas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ninja+Gaiden" alt="Ninja Gaiden - NES">
+                    <h3>Ninja Gaiden</h3>
+                    <p>Un juego de acción y plataformas de alta dificultad. Juega como el ninja Ryu Hayabusa y lucha contra una organización criminal para vengar la muerte de su padre.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Blaster+Master" alt="Blaster Master - NES">
+                    <h3>Blaster Master</h3>
+                    <p>Un juego de acción y exploración. Conduce un tanque, Sophia III, por un mundo subterráneo, luchando contra mutantes y descubriendo secretos en un mundo abierto.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Bubble+Bobble" alt="Bubble Bobble - NES">
+                    <h3>Bubble Bobble</h3>
+                    <p>Un juego de plataformas de puzles. Juega como los dragones Bub y Bob y atrapa a los enemigos en burbujas para derrotarlos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=River+City+Ransom" alt="River City Ransom - NES">
+                    <h3>River City Ransom</h3>
+                    <p>Un beat 'em up con elementos de RPG. Lucha contra pandillas en la ciudad de River City, ganando dinero para comprar habilidades y comida para mejorar tus estadísticas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=DuckTales" alt="DuckTales - NES">
+                    <h3>DuckTales</h3>
+                    <p>Un juego de plataformas de Capcom. Juega como el Tío Gilito y usa su bastón para saltar sobre los enemigos y explorar niveles temáticos para encontrar tesoros.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Kid+Icarus" alt="Kid Icarus - NES">
+                    <h3>Kid Icarus</h3>
+                    <p>Una aventura de plataformas con un estilo mitológico. Juega como Pit, un ángel con un arco, y lucha contra monstruos para salvar el Reino Celestial.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Super+Mario+Bros.+3" alt="Super Mario Bros. 3 - NES">
+                    <h3>Super Mario Bros. 3</h3>
+                    <p>Considerado uno de los mejores juegos de plataformas de la historia. Viaja por 8 mundos, usando nuevos power-ups como el Traje de Tanuki para volar y la Hoja Mágica para flotar.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Double+Dragon+II" alt="Double Dragon II: The Revenge - NES">
+                    <h3>Double Dragon II: The Revenge</h3>
+                    <p>Un beat 'em up de los hermanos Lee. Lucha contra la banda de Black Warriors para vengar la muerte de Marion en una aventura de acción de desplazamiento lateral.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Gradius" alt="Gradius - NES">
+                    <h3>Gradius</h3>
+                    <p>Un shooter de desplazamiento lateral. Pilota tu nave, Vic Viper, a través de oleadas de enemigos alienígenas, mejorando tu nave con power-ups para sobrevivir.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Castlevania+III" alt="Castlevania III: Dracula's Curse - NES">
+                    <h3>Castlevania III: Dracula's Curse</h3>
+                    <p>Una precuela de Castlevania. Juega como Trevor Belmont y otros 3 personajes con habilidades únicas para luchar contra el Conde Drácula y sus monstruos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Battletoads" alt="Battletoads - NES">
+                    <h3>Battletoads</h3>
+                    <p>Un beat 'em up de alta dificultad. Juega como una rana mutante y lucha contra el malvado Dark Queen para rescatar a tus amigos en una aventura de acción.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ducktales+2" alt="DuckTales 2 - NES">
+                    <h3>DuckTales 2</h3>
+                    <p>Una secuela mejorada del original. Juega como el Tío Gilito y explora nuevos mundos, usando su bastón para saltar, atacar y encontrar tesoros.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Batman+The+Video+Game" alt="Batman: The Video Game - NES">
+                    <h3>Batman: The Video Game</h3>
+                    <p>Un juego de acción y plataformas. Juega como Batman y lucha contra los criminales de Gotham City para derrotar al Joker en una aventura de alta velocidad.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Zelda+II" alt="Zelda II: The Adventure of Link - NES">
+                    <h3>Zelda II: The Adventure of Link</h3>
+                    <p>Una secuela única de Zelda. Combina la exploración con un sistema de combate de desplazamiento lateral y elementos de RPG para crear una experiencia diferente.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Bionic+Commando" alt="Bionic Commando - NES">
+                    <h3>Bionic Commando</h3>
+                    <p>Un juego de acción y plataformas. Juega como el agente especial Ladd y usa un brazo biónico para saltar y luchar contra el enemigo, sin la capacidad de saltar.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Dragon+Warrior" alt="Dragon Warrior - NES">
+                    <h3>Dragon Warrior</h3>
+                    <p>Uno de los primeros RPGs de consola. Juega como el Héroe de Erdrick y lucha contra dragones y monstruos para salvar el reino de Alefgard del malvado Dragonlord.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Metal+Gear" alt="Metal Gear - NES">
+                    <h3>Metal Gear</h3>
+                    <p>El juego original que dio inicio a la saga de sigilo. Juega como Solid Snake y desmantela una amenaza nuclear en una base enemiga, usando el sigilo para sobrevivir.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+            </div>
+        </div>
+
+        <a id="sms-ancla"></a>
+        <div class="plataforma-section">
+            <h2>Sega Master System</h2>
+            <div class="grid-container">
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Sonic+the+Hedgehog" alt="Sonic the Hedgehog - Master System">
+                    <h3>Sonic the Hedgehog</h3>
+                    <p>La versión de 8 bits del juego de Sonic. Corre a través de niveles coloridos, recolecta anillos y derrota al Dr. Robotnik para salvar la Isla de los Animales.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Phantasy+Star" alt="Phantasy Star - Master System">
+                    <h3>Phantasy Star</h3>
+                    <p>Un RPG de ciencia ficción de culto. Explora el sistema solar Algol con Alis y sus compañeros para vengar la muerte de su hermano y detener a un tirano.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Alex+Kidd+in+Miracle+World" alt="Alex Kidd in Miracle World - Master System">
+                    <h3>Alex Kidd in Miracle World</h3>
+                    <p>La aventura de la mascota original de Sega. Juega como el chico con orejas de mono, Alex Kidd, y explora un mundo de fantasía lleno de puzles y enemigos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Wonder+Boy+in+Monster+Land" alt="Wonder Boy in Monster Land - Master System">
+                    <h3>Wonder Boy in Monster Land</h3>
+                    <p>Un juego de plataformas de acción con elementos de RPG. Lucha contra monstruos, recolecta dinero y compra mejoras para tu héroe en una aventura mágica.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Castle+of+Illusion" alt="Castle of Illusion - Master System">
+                    <h3>Castle of Illusion Starring Mickey Mouse</h3>
+                    <p>Un juego de plataformas de Disney. Juega como Mickey Mouse y explora un castillo de fantasía para rescatar a Minnie de la malvada bruja Mizrabel.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Out+Run" alt="Out Run - Master System">
+                    <h3>Out Run</h3>
+                    <p>Un juego de carreras arcade. Conduce un Ferrari Testarossa por una serie de carreteras exóticas, eligiendo tu propio camino para llegar a la meta.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Psycho+Fox" alt="Psycho Fox - Master System">
+                    <h3>Psycho Fox</h3>
+                    <p>Un juego de plataformas con un héroe que puede transformarse en diferentes animales. Usa las habilidades de cada animal para explorar niveles y derrotar a enemigos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Golden+Axe" alt="Golden Axe - Master System">
+                    <h3>Golden Axe</h3>
+                    <p>Una versión de 8 bits del clásico beat 'em up de fantasía. Lucha contra el ejército del malvado Death Adder, con menos personajes pero con la misma acción.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=R-Type" alt="R-Type - Master System">
+                    <h3>R-Type</h3>
+                    <p>Un shooter de desplazamiento lateral. Pilota tu nave, R-9, y lucha contra alienígenas en un juego con gráficos impresionantes para la época y una dificultad desafiante.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Shinobi" alt="Shinobi - Master System">
+                    <h3>Shinobi</h3>
+                    <p>Una versión del clásico de arcade. Juega como el ninja Joe Musashi y rescata a los niños secuestrados por el sindicato criminal de Neo Zeed.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Zillion" alt="Zillion - Master System">
+                    <h3>Zillion</h3>
+                    <p>Un juego de acción y exploración. Juega como el agente de la White Knights, J.J., y explora una base enemiga, encontrando llaves y resolviendo puzles.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=California+Games" alt="California Games - Master System">
+                    <h3>California Games</h3>
+                    <p>Una colección de deportes de verano. Compite en eventos como skate, surf, patinaje y BMX, con una jugabilidad divertida y un ambiente relajado.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Fantasy+Zone" alt="Fantasy Zone - Master System">
+                    <h3>Fantasy Zone</h3>
+                    <p>Un shooter de desplazamiento lateral. Pilota tu nave, Opa-Opa, y lucha contra enemigos de fantasía, recolectando monedas para comprar mejoras para tu nave.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Kenseiden" alt="Kenseiden - Master System">
+                    <h3>Kenseiden</h3>
+                    <p>Un juego de acción y plataformas. Juega como el samurai Hayabusa y lucha contra demonios y monstruos en una aventura de fantasía oscura.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Power+Strike" alt="Power Strike - Master System">
+                    <h3>Power Strike</h3>
+                    <p>Un shooter de desplazamiento vertical. Pilota tu nave y lucha contra oleadas de enemigos, con una gran variedad de power-ups para mejorar tus armas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Miracle+Warriors" alt="Miracle Warriors: Seal of the Dark Lord - Master System">
+                    <h3>Miracle Warriors: Seal of the Dark Lord</h3>
+                    <p>Un RPG clásico. Crea tu propio grupo de aventureros y explora un mundo de fantasía, luchando contra monstruos y descubriendo secretos en una aventura épica.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Space+Harrier" alt="Space Harrier - Master System">
+                    <h3>Space Harrier</h3>
+                    <p>Un shooter en tercera persona. Juega como un héroe que corre a toda velocidad y lucha contra monstruos de fantasía y alienígenas en un mundo surrealista.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ninja+Gaiden" alt="Ninja Gaiden - Master System">
+                    <h3>Ninja Gaiden</h3>
+                    <p>Una versión única del juego de NES. Juega como el ninja Ryu Hayabusa y lucha contra una organización criminal en una aventura de plataformas de acción.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Choplifter" alt="Choplifter! - Master System">
+                    <h3>Choplifter!</h3>
+                    <p>Un juego de acción. Pilota un helicóptero y rescata a prisioneros de guerra de una base enemiga, luchando contra tanques y aviones en tu camino.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ghouls+'n+Ghosts" alt="Ghouls 'n Ghosts - Master System">
+                    <h3>Ghouls 'n Ghosts</h3>
+                    <p>Una versión de 8 bits del clásico de arcade. Juega como el caballero Arthur y lucha contra hordas de monstruos y demonios para rescatar a la Princesa Prin Prin.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Double+Dragon" alt="Double Dragon - Master System">
+                    <h3>Double Dragon</h3>
+                    <p>Una versión única del beat 'em up de arcade. Juega como Billy o Jimmy Lee y lucha contra la banda de Black Warriors para rescatar a Marion.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Golvellius" alt="Golvellius: Valley of Doom - Master System">
+                    <h3>Golvellius: Valley of Doom</h3>
+                    <p>Un RPG de acción que combina la exploración de Zelda con un sistema de combate de desplazamiento lateral y vertical. Lucha contra monstruos y descubre secretos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Rastan" alt="Rastan - Master System">
+                    <h3>Rastan</h3>
+                    <p>Un juego de plataformas de acción. Juega como un guerrero bárbaro y lucha contra monstruos de fantasía, usando tu espada para abrirte camino.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Teddy+Boy" alt="Teddy Boy - Master System">
+                    <h3>Teddy Boy</h3>
+                    <p>Un juego de plataformas de acción. Juega como un chico que puede saltar y disparar a los enemigos, recolectando monedas para comprar mejoras para tu personaje.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Zaxxon+3-D" alt="Zaxxon 3-D - Master System">
+                    <h3>Zaxxon 3-D</h3>
+                    <p>Un shooter isométrico en 3D. Pilota tu nave y lucha contra enemigos en una base alienígena, con gráficos 3D que te sumergen en la acción.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Lord+of+the+Sword" alt="Lord of the Sword - Master System">
+                    <h3>Lord of the Sword</h3>
+                    <p>Un RPG de acción. Juega como un príncipe que debe vengar la muerte de su padre y salvar el reino de un malvado hechicero.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Shadow+Dancer" alt="Shadow Dancer - Master System">
+                    <h3>Shadow Dancer</h3>
+                    <p>Un juego de plataformas de acción. Juega como un ninja y lucha contra el sindicato criminal de Neo Zeed, con la ayuda de un perro ninja.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Hang-On" alt="Hang-On - Master System">
+                    <h3>Hang-On</h3>
+                    <p>Un juego de carreras de motos. Compite en una serie de carreras de motos de alta velocidad, con una jugabilidad arcade y gráficos impresionantes para la época.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ghostbusters" alt="Ghostbusters - Master System">
+                    <h3>Ghostbusters</h3>
+                    <p>Un juego de acción y puzles. Juega como un equipo de cazafantasmas que debe salvar a la ciudad de una invasión de fantasmas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Astro+Warrior" alt="Astro Warrior - Master System">
+                    <h3>Astro Warrior</h3>
+                    <p>Un shooter de desplazamiento vertical. Pilota tu nave y lucha contra oleadas de enemigos alienígenas en un juego de acción arcade.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+            </div>
+        </div>
+
+        <a id="dreamcast-ancla"></a>
+        <div class="plataforma-section">
+            <h2>Sega Dreamcast</h2>
+            <div class="grid-container">
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Sonic+Adventure+2" alt="Sonic Adventure 2 - Dreamcast">
+                    <h3>Sonic Adventure 2</h3>
+                    <p>Una aventura de plataformas en 3D. Juega como Sonic o Shadow y corre a toda velocidad a través de niveles, recolectando las Esmeraldas del Caos para salvar al mundo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Shenmue" alt="Shenmue - Dreamcast">
+                    <h3>Shenmue</h3>
+                    <p>Una aventura de mundo abierto. Juega como Ryo Hazuki y explora una ciudad de Japón, luchando, investigando y resolviendo puzles para vengar la muerte de su padre.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Jet+Grind+Radio" alt="Jet Grind Radio - Dreamcast">
+                    <h3>Jet Grind Radio</h3>
+                    <p>Un juego de acción y graffiti. Patina por las calles de Tokio, pintando murales y luchando contra bandas rivales, con un estilo visual único.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Crazy+Taxi" alt="Crazy Taxi - Dreamcast">
+                    <h3>Crazy Taxi</h3>
+                    <p>Un juego de conducción arcade. Conduce un taxi por la ciudad, recogiendo clientes y llevándolos a sus destinos en un tiempo limitado, con una jugabilidad frenética.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Soulcalibur" alt="Soulcalibur - Dreamcast">
+                    <h3>Soulcalibur</h3>
+                    <p>Uno de los mejores juegos de lucha en 3D de la consola. Lucha con espadas y armas, con un sistema de combate fluido y gráficos impresionantes.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Power+Stone+2" alt="Power Stone 2 - Dreamcast">
+                    <h3>Power Stone 2</h3>
+                    <p>Un juego de lucha de arena en 3D. Lucha contra hasta 4 jugadores en escenarios interactivos, usando power-ups y objetos para ganar la batalla.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Resident+Evil+Code+Veronica" alt="Resident Evil - Code: Veronica - Dreamcast">
+                    <h3>Resident Evil - Code: Veronica</h3>
+                    <p>Un survival horror que narra la historia de Claire Redfield en una isla misteriosa. Lucha contra zombies y monstruos en una aventura aterradora.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Skies+of+Arcadia" alt="Skies of Arcadia - Dreamcast">
+                    <h3>Skies of Arcadia</h3>
+                    <p>Un RPG japonés de culto. Pilota tu nave a través de un mundo de islas flotantes, luchando contra piratas aéreos y explorando un universo vasto.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Grandia+II" alt="Grandia II - Dreamcast">
+                    <h3>Grandia II</h3>
+                    <p>Un RPG japonés con un sistema de combate dinámico y un mundo de fantasía. Sigue a un grupo de mercenarios que se ven envueltos en un conflicto entre dioses y demonios.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Phantasy+Star+Online" alt="Phantasy Star Online - Dreamcast">
+                    <h3>Phantasy Star Online</h3>
+                    <p>El primer RPG online de consola. Explora un mundo de ciencia ficción con tus amigos, luchando contra monstruos y descubriendo secretos en una aventura multijugador.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ikaruga" alt="Ikaruga - Dreamcast">
+                    <h3>Ikaruga</h3>
+                    <p>Un shooter de naves de culto. Alterna entre dos polaridades, blanco y negro, para absorber las balas de los enemigos y atacar a los que tienen la polaridad opuesta.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Rez" alt="Rez - Dreamcast">
+                    <h3>Rez</h3>
+                    <p>Un shooter de ritmo y música. Juega a través de un mundo de luces y sonidos, disparando a los enemigos al ritmo de la música, con una experiencia visual y auditiva única.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Metropolis+Street+Racer" alt="Metropolis Street Racer - Dreamcast">
+                    <h3>Metropolis Street Racer</h3>
+                    <p>Un juego de carreras de Sega. Compite en carreras por las calles de Londres, Tokio y San Francisco, con un sistema de puntos que premia el estilo de conducción.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Daytona+USA+2001" alt="Daytona USA 2001 - Dreamcast">
+                    <h3>Daytona USA 2001</h3>
+                    <p>Una versión mejorada del clásico de arcade. Compite en carreras de alta velocidad en pistas icónicas, con gráficos mejorados y una banda sonora rockera.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Marvel+vs+Capcom+2" alt="Marvel vs. Capcom 2 - Dreamcast">
+                    <h3>Marvel vs. Capcom 2</h3>
+                    <p>Un juego de lucha de 3 contra 3. Elige entre un enorme roster de 56 personajes, con un sistema de combate frenético y combos aéreos para una experiencia arcade perfecta.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Jojo's+Bizarre+Adventure" alt="Jojo's Bizarre Adventure - Dreamcast">
+                    <h3>JoJo's Bizarre Adventure</h3>
+                    <p>Un juego de lucha basado en el manga. Elige entre personajes con poderes únicos, los "stands", y lucha en un sistema de combate profundo y técnico.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Samba+de+Amigo" alt="Samba de Amigo - Dreamcast">
+                    <h3>Samba de Amigo</h3>
+                    <p>Un juego de ritmo que usaba maracas. Agita las maracas al ritmo de la música, en una fiesta de samba con una banda sonora alegre y divertida.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Space+Channel+5" alt="Space Channel 5 - Dreamcast">
+                    <h3>Space Channel 5</h3>
+                    <p>Un juego de ritmo y baile. Juega como Ulala, una reportera espacial, y lucha contra alienígenas bailando al ritmo de la música.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=The+House+of+the+Dead+2" alt="The House of the Dead 2 - Dreamcast">
+                    <h3>The House of the Dead 2</h3>
+                    <p>Un shooter de luz. Juega como un agente de la AMS y lucha contra hordas de zombies y monstruos en la ciudad de Venecia para detener al malvado Curien.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ikaruga" alt="Ikaruga - Dreamcast">
+                    <h3>Ikaruga</h3>
+                    <p>Un shooter de naves de culto. Alterna entre dos polaridades, blanco y negro, para absorber las balas de los enemigos y atacar a los que tienen la polaridad opuesta.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=ChuChu+Rocket!" alt="ChuChu Rocket! - Dreamcast">
+                    <h3>ChuChu Rocket!</h3>
+                    <p>Un juego de puzles de Sega. Ayuda a los ratones, ChuChus, a escapar de los gatos, KapuKapus, en un juego de puzles de acción de hasta 4 jugadores.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Seaman" alt="Seaman - Dreamcast">
+                    <h3>Seaman</h3>
+                    <p>Un juego de simulación de vida virtual. Cría un pez con cara de humano, Seaman, y habla con él a través de un micrófono, en una experiencia única y extraña.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Phantasy+Star+Online+v2" alt="Phantasy Star Online v2 - Dreamcast">
+                    <h3>Phantasy Star Online v2</h3>
+                    <p>Una versión mejorada del juego original. Con nuevas clases, armas y enemigos, es la mejor versión del juego para la consola.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Grandia+2" alt="Grandia II - Dreamcast">
+                    <h3>Grandia II</h3>
+                    <p>Un RPG japonés con un sistema de combate dinámico y un mundo de fantasía. Sigue a un grupo de mercenarios que se ven envueltos en un conflicto entre dioses y demonios.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Capcom+vs+SNK+2" alt="Capcom vs. SNK 2 - Dreamcast">
+                    <h3>Capcom vs. SNK 2</h3>
+                    <p>Un juego de lucha que reunió a los personajes de Capcom y SNK. Lucha con un sistema de combate profundo y técnico, con un enorme roster de personajes.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Illbleed" alt="Illbleed - Dreamcast">
+                    <h3>Illbleed</h3>
+                    <p>Un survival horror de culto. Explora un parque de atracciones de terror, resolviendo puzles y luchando contra monstruos en una experiencia única y extraña.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Dead+or+Alive+2" alt="Dead or Alive 2 - Dreamcast">
+                    <h3>Dead or Alive 2</h3>
+                    <p>Un juego de lucha en 3D. Lucha en escenarios interactivos, con un sistema de contragolpes y una jugabilidad rápida y fluida.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Sword+of+the+Berserk" alt="Sword of the Berserk: Guts' Rage - Dreamcast">
+                    <h3>Sword of the Berserk: Guts' Rage</h3>
+                    <p>Un juego de acción y aventura. Juega como Guts, el espadachín negro, y lucha contra hordas de demonios con una espada gigante en una aventura oscura y violenta.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=TrickStyle" alt="TrickStyle - Dreamcast">
+                    <h3>TrickStyle</h3>
+                    <p>Un juego de carreras de hoverboards. Compite en pistas futuristas, haciendo trucos y saltos para ganar ventaja en un juego con una jugabilidad frenética.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Tokyo+Xtreme+Racer+2" alt="Tokyo Xtreme Racer 2 - Dreamcast">
+                    <h3>Tokyo Xtreme Racer 2</h3>
+                    <p>Un juego de carreras de calle. Compite en carreras ilegales en las autopistas de Tokio, con una gran variedad de coches para elegir y una jugabilidad desafiante.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+            </div>
+        </div>
+
+        <a id="saturn-ancla"></a>
+        <div class="plataforma-section">
+            <h2>Sega Saturn</h2>
+            <div class="grid-container">
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Panzer+Dragoon+Saga" alt="Panzer Dragoon Saga - Saturn">
+                    <h3>Panzer Dragoon Saga</h3>
+                    <p>Considerado uno de los mejores RPG de la historia. Juega como Edge, un caballero dragón, y vuela a través de un mundo de fantasía para salvar a la humanidad.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Virtua+Fighter+2" alt="Virtua Fighter 2 - Saturn">
+                    <h3>Virtua Fighter 2</h3>
+                    <p>El juego de lucha que revolucionó los gráficos 3D. Lucha en un sistema de combate profundo y técnico, con personajes carismáticos y una gran variedad de movimientos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Sega+Rally+Championship" alt="Sega Rally Championship - Saturn">
+                    <h3>Sega Rally Championship</h3>
+                    <p>Un juego de rally arcade. Compite en carreras de rally en pistas de tierra, nieve y asfalto, con una jugabilidad adictiva y gráficos impresionantes para la época.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Nights+Into+Dreams" alt="Nights into Dreams... - Saturn">
+                    <h3>Nights into Dreams...</h3>
+                    <p>Un juego de plataformas y vuelo. Juega como Nights, un ser de los sueños, y vuela a través de un mundo de fantasía, recolectando objetos y luchando contra enemigos.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Guardian+Heroes" alt="Guardian Heroes - Saturn">
+                    <h3>Guardian Heroes</h3>
+                    <p>Un beat 'em up de acción. Lucha contra hordas de enemigos en un juego con elementos de RPG, con un sistema de combate profundo y un modo multijugador para 6 jugadores.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Shining+Force+III" alt="Shining Force III - Saturn">
+                    <h3>Shining Force III</h3>
+                    <p>Un RPG táctico por turnos. Sigue la historia de un grupo de héroes que luchan contra un imperio malvado, en una de las mejores joyas del género.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Radiant+Silvergun" alt="Radiant Silvergun - Saturn">
+                    <h3>Radiant Silvergun</h3>
+                    <p>Un shooter de naves de culto. Pilota tu nave y lucha contra oleadas de enemigos, con una gran variedad de armas y un sistema de combo único.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Daytona+USA" alt="Daytona USA - Saturn">
+                    <h3>Daytona USA</h3>
+                    <p>Un juego de carreras de coches arcade. Compite en pistas icónicas de la NASCAR, con una jugabilidad frenética y una banda sonora rockera.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Dragon+Force" alt="Dragon Force - Saturn">
+                    <h3>Dragon Force</h3>
+                    <p>Un juego de estrategia en tiempo real y RPG. Lidera a un grupo de señores de la guerra en una batalla por el control de un mundo de fantasía.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=House+of+the+Dead" alt="The House of the Dead - Saturn">
+                    <h3>The House of the Dead</h3>
+                    <p>Un shooter de luz. Juega como un agente de la AMS y lucha contra hordas de zombies y monstruos en una mansión para detener al malvado Dr. Curien.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Bug!" alt="Bug! - Saturn">
+                    <h3>Bug!</h3>
+                    <p>Un juego de plataformas en 3D. Juega como una mosca de la película de animación, Bug!, y salta, corre y lucha a través de un mundo de fantasía.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Street+Fighter+Alpha+2" alt="Street Fighter Alpha 2 - Saturn">
+                    <h3>Street Fighter Alpha 2</h3>
+                    <p>Un juego de lucha de Capcom. Elige entre un gran roster de personajes y lucha en un sistema de combate de combos y super-ataques.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Shining+the+Holy+Ark" alt="Shining the Holy Ark - Saturn">
+                    <h3>Shining the Holy Ark</h3>
+                    <p>Un RPG de fantasía. Sigue a un grupo de mercenarios que se ven envueltos en un conflicto entre la luz y la oscuridad, en una aventura de mazmorras.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Burning+Rangers" alt="Burning Rangers - Saturn">
+                    <h3>Burning Rangers</h3>
+                    <p>Un juego de acción y plataformas. Juega como un bombero espacial y lucha contra el fuego en una serie de niveles, rescatando a los civiles.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Fighters+Megamix" alt="Fighters Megamix - Saturn">
+                    <h3>Fighters Megamix</h3>
+                    <p>Un juego de lucha que reunió a los personajes de Virtua Fighter y Fighting Vipers. Lucha en un sistema de combate frenético y una gran variedad de modos de juego.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Grandia" alt="Grandia - Saturn">
+                    <h3>Grandia</h3>
+                    <p>Un RPG de fantasía. Sigue a un grupo de aventureros en una búsqueda para descubrir el misterio de una civilización antigua.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Burning+Rangers" alt="Burning Rangers - Saturn">
+                    <h3>Burning Rangers</h3>
+                    <p>Un juego de acción y plataformas. Juega como un bombero espacial y lucha contra el fuego en una serie de niveles, rescatando a los civiles.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Dragon+Force" alt="Dragon Force - Saturn">
+                    <h3>Dragon Force</h3>
+                    <p>Un juego de estrategia en tiempo real y RPG. Lidera a un grupo de señores de la guerra en una batalla por el control de un mundo de fantasía.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Fighters+Megamix" alt="Fighters Megamix - Saturn">
+                    <h3>Fighters Megamix</h3>
+                    <p>Un juego de lucha que reunió a los personajes de Virtua Fighter y Fighting Vipers. Lucha en un sistema de combate frenético y una gran variedad de modos de juego.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Grandia" alt="Grandia - Saturn">
+                    <h3>Grandia</h3>
+                    <p>Un RPG de fantasía. Sigue a un grupo de aventureros en una búsqueda para descubrir el misterio de una civilización antigua.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Shinobi+Legions" alt="Shinobi Legions - Saturn">
+                    <h3>Shinobi Legions</h3>
+                    <p>Un juego de plataformas de acción. Juega como el ninja Sho y lucha contra un malvado hechicero en una aventura de acción de alta velocidad.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Street+Fighter+Alpha" alt="Street Fighter Alpha - Saturn">
+                    <h3>Street Fighter Alpha</h3>
+                    <p>Una precuela de Street Fighter II. Elige entre un roster de personajes icónicos y lucha en un sistema de combate de combos y super-ataques.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Virtua+Fighter+Kids" alt="Virtua Fighter Kids - Saturn">
+                    <h3>Virtua Fighter Kids</h3>
+                    <p>Una versión caricaturizada de Virtua Fighter. Lucha con personajes con cabezas grandes y un estilo de combate divertido y exagerado.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Fighters+Megamix" alt="Fighters Megamix - Saturn">
+                    <h3>Fighters Megamix</h3>
+                    <p>Un juego de lucha que reunió a los personajes de Virtua Fighter y Fighting Vipers. Lucha en un sistema de combate frenético y una gran variedad de modos de juego.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Grandia" alt="Grandia - Saturn">
+                    <h3>Grandia</h3>
+                    <p>Un RPG de fantasía. Sigue a un grupo de aventureros en una búsqueda para descubrir el misterio de una civilización antigua.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Fighters+Megamix" alt="Fighters Megamix - Saturn">
+                    <h3>Fighters Megamix</h3>
+                    <p>Un juego de lucha que reunió a los personajes de Virtua Fighter y Fighting Vipers. Lucha en un sistema de combate frenético y una gran variedad de modos de juego.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Grandia" alt="Grandia - Saturn">
+                    <h3>Grandia</h3>
+                    <p>Un RPG de fantasía. Sigue a un grupo de aventureros en una búsqueda para descubrir el misterio de una civilización antigua.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Fighters+Megamix" alt="Fighters Megamix - Saturn">
+                    <h3>Fighters Megamix</h3>
+                    <p>Un juego de lucha que reunió a los personajes de Virtua Fighter y Fighting Vipers. Lucha en un sistema de combate frenético y una gran variedad de modos de juego.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Grandia" alt="Grandia - Saturn">
+                    <h3>Grandia</h3>
+                    <p>Un RPG de fantasía. Sigue a un grupo de aventureros en una búsqueda para descubrir el misterio de una civilización antigua.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Fighters+Megamix" alt="Fighters Megamix - Saturn">
+                    <h3>Fighters Megamix</h3>
+                    <p>Un juego de lucha que reunió a los personajes de Virtua Fighter y Fighting Vipers. Lucha en un sistema de combate frenético y una gran variedad de modos de juego.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+            </div>
+        </div>
+
+        <a id="ps2-ancla"></a>
+        <div class="plataforma-section">
+            <h2>PlayStation 2</h2>
+            <div class="grid-container">
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Grand+Theft+Auto+San+Andreas" alt="Grand Theft Auto: San Andreas - PS2">
+                    <h3>Grand Theft Auto: San Andreas</h3>
+                    <p>Un épico juego de mundo abierto que te pone en la piel de CJ en la década de los 90. Explora un vasto estado de California, con una historia llena de acción, tiroteos y una gran variedad de misiones.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Shadow+of+the+Colossus" alt="Shadow of the Colossus - PS2">
+                    <h3>Shadow of the Colossus</h3>
+                    <p>Una obra maestra de la aventura. Lucha contra 16 colosos gigantes para revivir a tu amada, en un mundo solitario y hermoso que te hará sentir la inmensidad de cada batalla.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=God+of+War+2" alt="God of War II - PS2">
+                    <h3>God of War II</h3>
+                    <p>La secuela del clásico de acción. Kratos, ahora el Dios de la Guerra, se enfrenta a Zeus y a los dioses del Olimpo en una aventura épica llena de combates brutales y mitología griega.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Metal+Gear+Solid+3" alt="Metal Gear Solid 3: Snake Eater - PS2">
+                    <h3>Metal Gear Solid 3: Snake Eater</h3>
+                    <p>Una precuela de la saga de sigilo. Juega como Big Boss en la Guerra Fría, usando el sigilo para infiltrarte en una base enemiga y detener una amenaza nuclear.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Final+Fantasy+X" alt="Final Fantasy X - PS2">
+                    <h3>Final Fantasy X</h3>
+                    <p>Un RPG japonés de culto. Sigue la historia de Tidus y Yuna en una búsqueda para detener a Sin, un monstruo que amenaza el mundo de Spira.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Resident+Evil+4" alt="Resident Evil 4 - PS2">
+                    <h3>Resident Evil 4</h3>
+                    <p>El juego que cambió el género de survival horror. Juega como Leon Kennedy en una aventura de acción en tercera persona, luchando contra zombies y monstruos en un pueblo de España.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Kingdom+Hearts+2" alt="Kingdom Hearts II - PS2">
+                    <h3>Kingdom Hearts II</h3>
+                    <p>La secuela del RPG de Disney y Final Fantasy. Únete a Sora, Donald y Goofy en una nueva aventura a través de los mundos de Disney, luchando contra la oscuridad y la luz.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Okami" alt="Okami - PS2">
+                    <h3>Okami</h3>
+                    <p>Un juego de aventura y acción con un estilo artístico de pintura japonesa. Juega como la diosa del sol, Amaterasu, y restaura la vida en el mundo de Nippon.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Gran+Turismo+4" alt="Gran Turismo 4 - PS2">
+                    <h3>Gran Turismo 4</h3>
+                    <p>El simulador de conducción definitiva de PlayStation 2. Con más de 700 coches y 50 circuitos, es una experiencia de carrera profunda y realista para los amantes del automovilismo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Ratchet+and+Clank+3" alt="Ratchet & Clank: Up Your Arsenal - PS2">
+                    <h3>Ratchet & Clank: Up Your Arsenal</h3>
+                    <p>Un juego de plataformas y disparos. Juega como el héroe Ratchet y su robot Clank, usando un arsenal de armas de locura para salvar la galaxia.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Jak+3" alt="Jak 3 - PS2">
+                    <h3>Jak 3</h3>
+                    <p>Un juego de plataformas de acción. Juega como Jak y su amigo Daxter en un mundo de fantasía con vehículos, armas y una historia llena de sorpresas.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Devil+May+Cry+3" alt="Devil May Cry 3 - PS2">
+                    <h3>Devil May Cry 3: Dante's Awakening</h3>
+                    <p>Un juego de acción y hack-and-slash. Juega como el cazador de demonios Dante y lucha contra hordas de monstruos, con un sistema de combate de combos y estilo.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Persona+4" alt="Persona 4 - PS2">
+                    <h3>Persona 4</h3>
+                    <p>Un RPG japonés de culto. Sigue a un grupo de estudiantes de secundaria que resuelven un misterio de asesinatos en un pequeño pueblo, usando sus Personas para luchar contra las sombras.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Silent+Hill+2" alt="Silent Hill 2 - PS2">
+                    <h3>Silent Hill 2</h3>
+                    <p>Uno de los juegos de terror psicológico más influyentes de la historia. Juega como James Sunderland y busca a su esposa en el misterioso pueblo de Silent Hill, enfrentando sus propios demonios.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Metal+Gear+Solid+2" alt="Metal Gear Solid 2: Sons of Liberty - PS2">
+                    <h3>Metal Gear Solid 2: Sons of Liberty</h3>
+                    <p>Una secuela de sigilo de culto. Juega como el agente Raiden y Snake, infiltrándote en una base enemiga en el océano para detener una amenaza nuclear.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Final+Fantasy+XII" alt="Final Fantasy XII - PS2">
+                    <h3>Final Fantasy XII</h3>
+                    <p>Un RPG japonés de fantasía. Sigue a un grupo de héroes que luchan contra un imperio malvado, con un sistema de combate único y un mundo vasto para explorar.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Tony+Hawk's+Pro+Skater+3" alt="Tony Hawk's Pro Skater 3 - PS2">
+                    <h3>Tony Hawk's Pro Skater 3</h3>
+                    <p>Un juego de skate. Realiza trucos increíbles en diversos escenarios, con un sistema de combos más profundo y una jugabilidad adictiva.</p>
+                    <div class="precio-digital">$2.000 CLP</div>
+                </div>
+                <div class="juego-digital">
+                    <img src="https://via.placeholder.com/300x200?text=Tekken+5" alt="Tekken 5 - PS2">
+                    <h3>Tekken 5</h3>
+                    <p>
+                        Un juego de lucha en 3D. Lu aéreos, con personajes carismáticos y una gran variedad
+                    <p>
+                        <div class="precio-digital">$2.000 CLP</div>
+                </div>
+            </div>
+
+
+
+
+            <div style="text-align: center; margin-top: 20px;">
+                <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+            </div>
+</section>
+
+    <script>
+        document.getElementById('game-search').addEventListener('keyup', function () {
+            let filter = this.value.toUpperCase();
+            let games = document.querySelectorAll('.juego, .articulo, .juego-digital');
+
+            games.forEach(function (game) {
+                let title = game.querySelector('h3').textContent.toUpperCase();
+                if (title.indexOf(filter) > -1) {
+                    game.style.display = "";
+                } else {
+                    game.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
