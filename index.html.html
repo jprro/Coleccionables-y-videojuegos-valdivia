@@ -217,7 +217,30 @@
     </div>
 
     <a id="catalogo-fisico-ancla"></a>
-    <section class="catalogo-fisico">
+    
+<!-- Contador de visitas -->
+<div id="contador-visitas" style="text-align:center; margin:20px; font-weight:bold; font-size:18px;">
+    Cargando visitas...
+</div>
+
+<script>
+    const NAMESPACE = 'coleccionablesyvideojuegosvaldivia';
+    const KEY = 'visitas';
+    const URL = `https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`;
+
+    fetch(URL)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('contador-visitas').innerText =
+                `Esta página ha sido visitada ${data.value} veces.`;
+        })
+        .catch(() => {
+            document.getElementById('contador-visitas').innerText =
+                'No se pudo cargar el contador.';
+        });
+</script>
+
+<section class="catalogo-fisico">
         <h2>Catálogo de Juegos Físicos</h2>
 
 
@@ -1243,7 +1266,7 @@
                 <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
             </div>
         </div>
-        cha en un sistema de combate de combos<a id="genesis-ancla"></a>
+        
         <div class="plataforma-section">
             <h2>Sega Genesis</h2>
             <div class="grid-container">
