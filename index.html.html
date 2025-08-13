@@ -198,6 +198,30 @@
             font-style: italic;
         }
     </style>
+    <!-- Contador de visitas -->
+    <div id="contador-visitas" style="text-align:center; margin:20px; font-weight:bold; font-size:18px;">
+        Cargando visitas...
+    </div>
+
+    <script>
+        const NAMESPACE = 'coleccionablesyvideojuegosvaldivia';
+        const KEY = 'visitas';
+        const URL = `https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`;
+
+        fetch(URL)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('contador-visitas').innerText =
+                    `Esta página ha sido visitada ${data.value} veces.`;
+            })
+            .catch(() => {
+                document.getElementById('contador-visitas').innerText =
+                    'No se pudo cargar el contador.';
+            });
+    </script>
+    
+</html>
+
 </head>
 <body>
 
@@ -226,18 +250,24 @@
 <script>
     const NAMESPACE = 'coleccionablesyvideojuegosvaldivia';
     const KEY = 'visitas';
-    const URL = `https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`;
+    const API_BASE = 'https://api.countapi.xyz';
 
-    fetch(URL)
-        .then(response => response.json())
-        .then(data => {
+    async function actualizarContador() {
+        try {
+            // Inicializa el contador en 0 si no existe
+            await fetch(`${API_BASE}/create?namespace=${NAMESPACE}&key=${KEY}&value=0`);
+            // Luego incrementa y obtiene el valor actual
+            const res = await fetch(`${API_BASE}/hit/${NAMESPACE}/${KEY}`);
+            const data = await res.json();
             document.getElementById('contador-visitas').innerText =
                 `Esta página ha sido visitada ${data.value} veces.`;
-        })
-        .catch(() => {
+        } catch {
             document.getElementById('contador-visitas').innerText =
                 'No se pudo cargar el contador.';
-        });
+        }
+    }
+
+    actualizarContador();
 </script>
 
 <section class="catalogo-fisico">
@@ -1266,7 +1296,7 @@
                 <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
             </div>
         </div>
-        
+        cha en un sistema de combate de combos<a id="genesis-ancla"></a>
         <div class="plataforma-section">
             <h2>Sega Genesis</h2>
             <div class="grid-container">
@@ -1450,10 +1480,10 @@
                     <p>La última entrega de la trilogía original. Juega con nuevos personajes y lucha contra un ejército de robots en la ciudad, con una trama más oscura y desafiante.</p>
                     <div class="precio-digital">$2.000 CLP</div>
                 </div>
-            </div> 
+            </div>
             <div style="text-align: center; margin-top: 20px;">
-    <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
-</div>
+                <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+            </div>
 
         </div>
 
@@ -2339,7 +2369,7 @@
             <div style="text-align: center; margin-top: 20px;">
                 <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
             </div>
-</section>
+    </section>
 
     <script>
         document.getElementById('game-search').addEventListener('keyup', function () {
