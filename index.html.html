@@ -198,30 +198,6 @@
             font-style: italic;
         }
     </style>
-    <!-- Contador de visitas -->
-    <div id="contador-visitas" style="text-align:center; margin:20px; font-weight:bold; font-size:18px;">
-        Cargando visitas...
-    </div>
-
-    <script>
-        const NAMESPACE = 'coleccionablesyvideojuegosvaldivia';
-        const KEY = 'visitas';
-        const URL = `https://api.countapi.xyz/hit/${NAMESPACE}/${KEY}`;
-
-        fetch(URL)
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('contador-visitas').innerText =
-                    `Esta página ha sido visitada ${data.value} veces.`;
-            })
-            .catch(() => {
-                document.getElementById('contador-visitas').innerText =
-                    'No se pudo cargar el contador.';
-            });
-    </script>
-    
-</html>
-
 </head>
 <body>
 
@@ -242,33 +218,27 @@
 
     <a id="catalogo-fisico-ancla"></a>
     
-<!-- Contador de visitas -->
+<!-- Contador de visitas (CounterAPI, sin problemas de CORS) -->
 <div id="contador-visitas" style="text-align:center; margin:20px; font-weight:bold; font-size:18px;">
-    Cargando visitas...
+  Cargando visitas...
 </div>
-
 <script>
-    const NAMESPACE = 'coleccionablesyvideojuegosvaldivia';
-    const KEY = 'visitas';
-    const API_BASE = 'https://api.countapi.xyz';
-
-    async function actualizarContador() {
-        try {
-            // Inicializa el contador en 0 si no existe
-            await fetch(`${API_BASE}/create?namespace=${NAMESPACE}&key=${KEY}&value=0`);
-            // Luego incrementa y obtiene el valor actual
-            const res = await fetch(`${API_BASE}/hit/${NAMESPACE}/${KEY}`);
-            const data = await res.json();
-            document.getElementById('contador-visitas').innerText =
-                `Esta página ha sido visitada ${data.value} veces.`;
-        } catch {
-            document.getElementById('contador-visitas').innerText =
-                'No se pudo cargar el contador.';
-        }
+  // Callback JSONP que recibe el valor del contador
+  function contadorCallback(resp){
+    var el = document.getElementById('contador-visitas');
+    try{
+      if(resp && typeof resp.value === 'number'){
+        el.textContent = 'Esta página ha sido visitada ' + resp.value + ' veces.';
+      }else{
+        el.textContent = 'No se pudo cargar el contador.';
+      }
+    }catch(e){
+      el.textContent = 'No se pudo cargar el contador.';
     }
-
-    actualizarContador();
+  }
 </script>
+<!-- Incrementa y obtiene el conteo global para la página -->
+<script async src="https://counterapi.com/api/coleccionablesyvideojuegosvaldivia/view/home?callback=contadorCallback"></script>
 
 <section class="catalogo-fisico">
         <h2>Catálogo de Juegos Físicos</h2>
@@ -1480,10 +1450,10 @@
                     <p>La última entrega de la trilogía original. Juega con nuevos personajes y lucha contra un ejército de robots en la ciudad, con una trama más oscura y desafiante.</p>
                     <div class="precio-digital">$2.000 CLP</div>
                 </div>
-            </div>
+            </div> 
             <div style="text-align: center; margin-top: 20px;">
-                <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
-            </div>
+    <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
+</div>
 
         </div>
 
@@ -2369,7 +2339,7 @@
             <div style="text-align: center; margin-top: 20px;">
                 <a class="btn-contacto" target="_blank" href="https://wa.me/56984440624?text=Hola! Quiero consultar por un videojuego.">Consultar por un videojuego</a>
             </div>
-    </section>
+</section>
 
     <script>
         document.getElementById('game-search').addEventListener('keyup', function () {
